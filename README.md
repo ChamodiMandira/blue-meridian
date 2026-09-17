@@ -1,6 +1,14 @@
 # 💎 Blue Meridian — Rare Ceylon Gemstones & High Fine Jewelry
 
-> An authentic Haute Joaillerie digital maison showcasing unheated Ceylon royal blue sapphires, natural padparadscha, fine rubies, and bespoke jewelry commissions.
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Explore_Maison-d4af37?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chamodimandira.github.io/blue-meridian/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript_ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+> **Live Preview:** 🌐 [https://chamodimandira.github.io/blue-meridian/](https://chamodimandira.github.io/blue-meridian/)
+
+> An authentic Haute Joaillerie digital maison showcasing unheated Ceylon royal blue sapphires, natural padparadscha, fine rubies, and bespoke jewelry commissions. Built entirely with pure vanilla technologies for ultra-fast, zero-dependency luxury performance.
 
 ![Blue Meridian Showcase](assets/images/hero_gemstone.jpg)
 
