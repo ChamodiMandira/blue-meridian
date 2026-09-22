@@ -69,13 +69,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ambient Stardust Canvas
     if (introCanvas) {
       const ctx = introCanvas.getContext('2d');
-      let width = introCanvas.width = window.innerWidth;
-      let height = introCanvas.height = window.innerHeight;
+      let dpr = window.devicePixelRatio || 1;
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+
+      function resizeCanvas() {
+        dpr = window.devicePixelRatio || 1;
+        width = window.innerWidth;
+        height = window.innerHeight;
+        introCanvas.width = Math.floor(width * dpr);
+        introCanvas.height = Math.floor(height * dpr);
+        introCanvas.style.width = width + 'px';
+        introCanvas.style.height = height + 'px';
+      }
+      resizeCanvas();
 
       window.addEventListener('resize', () => {
         if (!introDismissed && introCanvas) {
-          width = introCanvas.width = window.innerWidth;
-          height = introCanvas.height = window.innerHeight;
+          resizeCanvas();
         }
       });
 
@@ -88,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
           radius: Math.random() * 2 + 0.6,
           speedY: Math.random() * 0.45 + 0.15,
           speedX: (Math.random() - 0.5) * 0.3,
-          color: Math.random() > 0.4 ? 'rgba(243, 217, 157, ' : 'rgba(96, 165, 250, ',
+          color: Math.random() > 0.4 ? 'rgba(228, 196, 122, ' : 'rgba(96, 165, 250, ',
           alpha: Math.random() * 0.7 + 0.2,
           pulse: Math.random() * Math.PI * 2,
           pulseSpeed: Math.random() * 0.04 + 0.015
@@ -97,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       function drawParticles() {
         if (introDismissed) return;
-        ctx.clearRect(0, 0, width, height);
+        ctx.clearRect(0, 0, introCanvas.width, introCanvas.height);
 
         particles.forEach(p => {
           p.y -= p.speedY;
@@ -113,13 +124,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const currentAlpha = Math.max(0.1, p.alpha * (0.6 + 0.4 * Math.sin(p.pulse)));
           ctx.beginPath();
-          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.arc(p.x * dpr, p.y * dpr, p.radius * dpr, 0, Math.PI * 2);
           ctx.fillStyle = p.color + currentAlpha + ')';
           ctx.fill();
 
           if (p.radius > 1.8) {
-            ctx.shadowColor = 'rgba(243, 217, 157, 0.6)';
-            ctx.shadowBlur = 8;
+            ctx.shadowColor = 'rgba(228, 196, 122, 0.6)';
+            ctx.shadowBlur = 8 * dpr;
           } else {
             ctx.shadowBlur = 0;
           }
@@ -605,7 +616,7 @@ document.addEventListener('DOMContentLoaded', () => {
         summaryHTML += `
           <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; font-size:0.85rem;">
             <span>${item.name} (x${item.quantity})</span>
-            <span style="color:#f3d99d; font-weight:700;">${formatPrice(itemTot)}</span>
+            <span style="color:#D4AF68; font-weight:700;">${formatPrice(itemTot)}</span>
           </div>
         `;
       });
@@ -651,9 +662,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const toast = document.createElement('div');
     toast.className = 'toast-alert';
     toast.style.cssText = `
-      background: #141b2a;
-      color: #f8fafc;
-      border: 1px solid rgba(224, 184, 90, 0.4);
+      background: #151F30;
+      color: #F8F7F3;
+      border: 1px solid #806A3D;
       padding: 0.9rem 1.4rem;
       border-radius: 8px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
@@ -666,7 +677,7 @@ document.addEventListener('DOMContentLoaded', () => {
       animation: toastSlideIn 0.3s ease forwards;
     `;
 
-    toast.innerHTML = `<i class="fa-solid fa-gem" style="color:#e0b85a;"></i> <span>${message}</span>`;
+    toast.innerHTML = `<i class="fa-solid fa-gem" style="color:#D4AF68;"></i> <span>${message}</span>`;
     container.appendChild(toast);
 
     setTimeout(() => {
