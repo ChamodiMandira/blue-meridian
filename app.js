@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (introEnterBtn) introEnterBtn.addEventListener('click', dismissIntro);
     if (introSkipBtn) introSkipBtn.addEventListener('click', dismissIntro);
 
+    // If deep-linked with a section hash (e.g. #browse-gemstones), skip intro immediately
+    if (window.location.hash) {
+      dismissIntro();
+    }
+
     // Auto-progress bar over 4.5 seconds
     const totalDuration = 4500;
     const startTime = performance.now();
