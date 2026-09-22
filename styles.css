@@ -2512,7 +2512,8 @@ a {
   overflow-y: auto;
 }
 
-.modal-backdrop.show {
+.modal-backdrop.show,
+.modal-backdrop.active {
   display: flex;
 }
 
@@ -3655,13 +3656,17 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: right center;
-  filter: brightness(0.65) contrast(1.1);
+  filter: brightness(0.96) contrast(1.05);
+  transform: scale(1.02);
+  transition: transform 12s ease-out;
 }
 
 .figma-hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 25% 45%, rgba(13, 17, 26, 0.94) 0%, rgba(13, 17, 26, 0.82) 45%, rgba(13, 17, 26, 0.6) 80%, rgba(13, 17, 26, 0.9) 100%);
+  background: linear-gradient(90deg, rgba(16, 19, 28, 0.94) 0%, rgba(16, 19, 28, 0.78) 38%, rgba(16, 19, 28, 0.12) 72%, rgba(16, 19, 28, 0.45) 100%),
+              linear-gradient(180deg, rgba(16, 19, 28, 0.45) 0%, transparent 28%, rgba(16, 19, 28, 0.85) 100%);
+  pointer-events: none;
 }
 
 .figma-hero-content {
@@ -3948,9 +3953,7 @@ a {
 }
 
 .cat-img-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(20, 26, 39, 0.95) 100%);
+  display: none !important;
 }
 
 .cat-content {
@@ -4334,13 +4337,15 @@ a {
 
 .heritage-glass-badge {
   position: absolute;
-  background: rgba(18, 24, 38, 0.88);
+  background: rgba(16, 21, 34, 0.82);
   border: 1px solid rgba(224, 184, 90, 0.35);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 1rem 1.4rem;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  z-index: 3;
 }
 
 .badge-top-right {

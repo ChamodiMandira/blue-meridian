@@ -6,6 +6,122 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // =========================================================================
+  // 0. Cinematic Intro Overlay Engine
+  // =========================================================================
+  const luxuryIntroOverlay = document.getElementById('luxuryIntroOverlay');
+  const introCanvas = document.getElementById('introCanvas');
+  const introEnterBtn = document.getElementById('introEnterBtn');
+  const introSkipBtn = document.getElementById('introSkipBtn');
+  const introProgressFill = document.getElementById('introProgressFill');
+
+  if (luxuryIntroOverlay) {
+    let introDismissed = false;
+    let animFrameId = null;
+
+    function dismissIntro() {
+      if (introDismissed) return;
+      introDismissed = true;
+      luxuryIntroOverlay.classList.add('fade-out');
+      if (animFrameId) cancelAnimationFrame(animFrameId);
+      setTimeout(() => {
+        luxuryIntroOverlay.classList.add('dismissed');
+      }, 850);
+    }
+
+    if (introEnterBtn) introEnterBtn.addEventListener('click', dismissIntro);
+    if (introSkipBtn) introSkipBtn.addEventListener('click', dismissIntro);
+
+    // Auto-progress bar over 4.5 seconds
+    const totalDuration = 4500;
+    const startTime = performance.now();
+
+    function updateIntroProgress(now) {
+      if (introDismissed) return;
+      const elapsed = now - startTime;
+      const pct = Math.min(100, (elapsed / totalDuration) * 100);
+      if (introProgressFill) introProgressFill.style.width = `${pct}%`;
+
+      if (elapsed >= totalDuration) {
+        dismissIntro();
+      } else {
+        requestAnimationFrame(updateIntroProgress);
+      }
+    }
+    requestAnimationFrame(updateIntroProgress);
+
+    // Interactive Escape key dismissal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !introDismissed) {
+        dismissIntro();
+      }
+    });
+
+    // Ambient Stardust Canvas
+    if (introCanvas) {
+      const ctx = introCanvas.getContext('2d');
+      let width = introCanvas.width = window.innerWidth;
+      let height = introCanvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        if (!introDismissed && introCanvas) {
+          width = introCanvas.width = window.innerWidth;
+          height = introCanvas.height = window.innerHeight;
+        }
+      });
+
+      const particles = [];
+      const particleCount = Math.min(65, Math.floor(width / 22));
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: Math.random() * 2 + 0.6,
+          speedY: Math.random() * 0.45 + 0.15,
+          speedX: (Math.random() - 0.5) * 0.3,
+          color: Math.random() > 0.4 ? 'rgba(243, 217, 157, ' : 'rgba(96, 165, 250, ',
+          alpha: Math.random() * 0.7 + 0.2,
+          pulse: Math.random() * Math.PI * 2,
+          pulseSpeed: Math.random() * 0.04 + 0.015
+        });
+      }
+
+      function drawParticles() {
+        if (introDismissed) return;
+        ctx.clearRect(0, 0, width, height);
+
+        particles.forEach(p => {
+          p.y -= p.speedY;
+          p.x += p.speedX;
+          p.pulse += p.pulseSpeed;
+
+          if (p.y < -10) {
+            p.y = height + 10;
+            p.x = Math.random() * width;
+          }
+          if (p.x < -10) p.x = width + 10;
+          if (p.x > width + 10) p.x = -10;
+
+          const currentAlpha = Math.max(0.1, p.alpha * (0.6 + 0.4 * Math.sin(p.pulse)));
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = p.color + currentAlpha + ')';
+          ctx.fill();
+
+          if (p.radius > 1.8) {
+            ctx.shadowColor = 'rgba(243, 217, 157, 0.6)';
+            ctx.shadowBlur = 8;
+          } else {
+            ctx.shadowBlur = 0;
+          }
+        });
+
+        animFrameId = requestAnimationFrame(drawParticles);
+      }
+      animFrameId = requestAnimationFrame(drawParticles);
+    }
+  }
+
+  // =========================================================================
   // 1. Currency Rates & State Management
   // =========================================================================
   const CURRENCY_DATA = {

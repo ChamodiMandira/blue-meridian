@@ -29,6 +29,67 @@
 </head>
 <body class="luxury-theme figma-blueprint">
 
+  <!-- Cinematic Salon Intro Experience Overlay -->
+  <div class="luxury-intro-overlay" id="luxuryIntroOverlay" role="dialog" aria-modal="true" aria-label="Welcome to Blue Meridian">
+    <!-- Ambient Floating Stardust Canvas -->
+    <canvas id="introCanvas" class="intro-caustics-canvas"></canvas>
+
+    <!-- Ambient Cinematic Backdrop -->
+    <div class="intro-backdrop-cinema">
+      <img src="assets/images/figma_hero_canvas.jpg" alt="" class="intro-bg-gem" fetchpriority="high">
+      <div class="intro-cinematic-vignette"></div>
+      <div class="intro-light-beam"></div>
+    </div>
+
+    <!-- Corner Skip Button -->
+    <button class="intro-skip-corner" id="introSkipBtn" aria-label="Skip introduction">
+      <span>Skip Intro</span>
+      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+    </button>
+
+    <!-- Center Stage Content -->
+    <div class="intro-stage-center">
+      <!-- Animated Gemstone Emblem -->
+      <div class="intro-emblem-wrapper">
+        <svg class="intro-gem-vector" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon class="intro-poly intro-outer" points="50,6 92,28 92,72 50,94 8,72 8,28" stroke="#e0b85a" stroke-width="1.6" fill="none" />
+          <polygon class="intro-poly intro-mid" points="50,20 80,35 80,65 50,80 20,65 20,35" stroke="#f3d99d" stroke-width="1.2" stroke-dasharray="2 3" fill="none" />
+          <line class="intro-line" x1="50" y1="6" x2="50" y2="20" stroke="#c89e37" stroke-width="1.2" />
+          <line class="intro-line" x1="92" y1="28" x2="80" y2="35" stroke="#c89e37" stroke-width="1.2" />
+          <line class="intro-line" x1="92" y1="72" x2="80" y2="65" stroke="#c89e37" stroke-width="1.2" />
+          <line class="intro-line" x1="50" y1="94" x2="50" y2="80" stroke="#c89e37" stroke-width="1.2" />
+          <line class="intro-line" x1="8" y1="72" x2="20" y2="65" stroke="#c89e37" stroke-width="1.2" />
+          <line class="intro-line" x1="8" y1="28" x2="20" y2="35" stroke="#c89e37" stroke-width="1.2" />
+          <circle class="intro-node" cx="50" cy="50" r="3.5" fill="#fff2dc" />
+        </svg>
+        <div class="intro-lens-flare"></div>
+      </div>
+
+      <!-- Brand Reveal Typography -->
+      <div class="intro-brand-reveal">
+        <span class="intro-eyebrow">HAUTE GEMMOLOGY &amp; FINE JEWELRY</span>
+        <h1 class="intro-brand-title">BLUE MERIDIAN</h1>
+        <div class="intro-ornament-line">
+          <div class="intro-line-l"></div>
+          <span class="intro-gem-sparkle">✦</span>
+          <div class="intro-line-r"></div>
+        </div>
+        <p class="intro-provenance">CEYLON ROYAL VAULT • RATNAPURA SINCE 1986</p>
+      </div>
+
+      <!-- Action & Progress Bar -->
+      <div class="intro-action-container">
+        <button class="intro-enter-btn" id="introEnterBtn" aria-label="Enter the gemstone vault">
+          <span>ENTER THE VAULT</span>
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </button>
+        <div class="intro-progress-bar">
+          <div class="intro-progress-fill" id="introProgressFill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Main Navigation Header -->
   <header class="figma-header" id="mainHeader">
     <div class="container figma-header-inner">
