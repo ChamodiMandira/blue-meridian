@@ -3,173 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blue Meridian | Rare Ceylon Gemstones & High Fine Jewelry</title>
-  <meta name="description" content="Discover the beauty of Sri Lankan gemstones. Ethically sourced unheated Ceylon royal blue sapphires, rare padparadscha, rubies, and bespoke fine jewelry certified by GIA and NGJA.">
-  <meta name="keywords" content="Ceylon sapphire, Sri Lanka gemstones, Blue Meridian, royal blue sapphire, padparadscha, unheated sapphire, Ratnapura gems, GIA certified gemstones, bespoke jewelry">
+  <title>Blue Meridian | Fine Ceylon Gemstones & High Jewellery</title>
+  <meta name="description" content="Discover the rare beauty of Sri Lankan gemstones. Authentic Ceylon gems, carefully selected and independently certified by GIA, AGL, GRS, and Gübelin. From Ratnapura to collectors in 48 countries.">
+  <meta name="keywords" content="Ceylon gems, Sri Lanka gemstones, Blue Sapphire, Pigeon Blood Ruby, Star Sapphire, Alexandrite, Cat's Eye, Emerald, Blue Meridian, Ratnapura, GIA certified">
   
-  <!-- Open Graph / Social -->
+  <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Blue Meridian | Rare Ceylon Gemstones & High Fine Jewelry">
-  <meta property="og:description" content="Discover the beauty of Sri Lankan gemstones. Ethically sourced unheated royal blue sapphires, rare padparadscha, and bespoke high jewelry.">
-  <meta property="og:image" content="assets/images/hero_gemstone.jpg">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
+  <meta property="og:title" content="Blue Meridian | Fine Ceylon Gemstones">
+  <meta property="og:description" content="Authentic Ceylon gems, carefully selected and independently certified. From the mines of Ratnapura to collectors in 48 countries.">
+  <meta property="og:image" content="assets/images/figma_full_design_reference.png">
 
-  <!-- Google Fonts: Cinzel, Cormorant Garamond, Outfit -->
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><polygon points=%2250,5 95,27 95,73 50,95 5,73 5,27%22 fill=%22none%22 stroke=%22%23e0b85a%22 stroke-width=%228%22/><circle cx=%2250%22 cy=%2250%22 r=%2216%22 fill=%22%23e0b85a%22/></svg>">
+
+  <!-- Google Fonts: Playfair Display, Cinzel, Cormorant Garamond, Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="luxury-theme">
-
-  <!-- Cinematic Salon Intro Experience Overlay -->
-  <div class="luxury-intro-overlay" id="luxuryIntroOverlay" aria-modal="true" role="dialog" aria-label="Blue Meridian Introduction">
-    <!-- Ambient Canvas for Floating Stardust Particles -->
-    <canvas id="introCanvas" class="intro-caustics-canvas"></canvas>
-    
-    <!-- Ambient Cinema Vignette & Prismatic Rays -->
-    <div class="intro-backdrop-cinema">
-      <img src="assets/images/hero_gemstone.jpg" alt="Atmospheric Sapphire Gemstone" class="intro-bg-gem">
-      <div class="intro-cinematic-vignette"></div>
-      <div class="intro-light-beam"></div>
-    </div>
-
-    <div class="intro-stage-center">
-      <!-- Animated Geometric Logo Emblem -->
-      <div class="intro-emblem-wrapper">
-        <svg viewBox="0 0 100 100" class="intro-gem-vector" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="introGoldGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#FFF3D1"/>
-              <stop offset="35%" stop-color="#E2C98D"/>
-              <stop offset="70%" stop-color="#D4AF37"/>
-              <stop offset="100%" stop-color="#8C6E26"/>
-            </linearGradient>
-            <radialGradient id="introSapphireGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="rgba(37, 99, 235, 0.45)"/>
-              <stop offset="60%" stop-color="rgba(29, 78, 216, 0.2)"/>
-              <stop offset="100%" stop-color="transparent"/>
-            </radialGradient>
-            <filter id="introGlowFilter" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="3" result="blur" />
-              <feComposite in="SourceGraphic" in2="blur" operator="over" />
-            </filter>
-          </defs>
-
-          <!-- Outer Hexagonal Crown Facets -->
-          <polygon class="intro-poly intro-outer" points="50,4 92,26 92,74 50,96 8,74 8,26" stroke="url(#introGoldGrad)" stroke-width="2.2" fill="url(#introSapphireGlow)"/>
-          
-          <!-- Mid Facet Geometry -->
-          <polygon class="intro-poly intro-mid" points="50,16 80,32 80,68 50,84 20,68 20,32" stroke="url(#introGoldGrad)" stroke-width="1.6" fill="rgba(56, 189, 248, 0.12)"/>
-          
-          <!-- Inner Pavilion Star / Radial Facet Lines -->
-          <line class="intro-line" x1="50" y1="4" x2="50" y2="16" stroke="url(#introGoldGrad)" stroke-width="1.2"/>
-          <line class="intro-line" x1="92" y1="26" x2="80" y2="32" stroke="url(#introGoldGrad)" stroke-width="1.2"/>
-          <line class="intro-line" x1="92" y1="74" x2="80" y2="68" stroke="url(#introGoldGrad)" stroke-width="1.2"/>
-          <line class="intro-line" x1="50" y1="96" x2="50" y2="84" stroke="url(#introGoldGrad)" stroke-width="1.2"/>
-          <line class="intro-line" x1="8" y1="74" x2="20" y2="68" stroke="url(#introGoldGrad)" stroke-width="1.2"/>
-          <line class="intro-line" x1="8" y1="26" x2="20" y2="32" stroke="url(#introGoldGrad)" stroke-width="1.2"/>
-          
-          <!-- Table Center Node -->
-          <circle class="intro-node" cx="50" cy="50" r="5.5" fill="url(#introGoldGrad)" filter="url(#introGlowFilter)"/>
-        </svg>
-
-        <!-- Dynamic Prismatic Lens Flare -->
-        <div class="intro-lens-flare"></div>
-      </div>
-
-      <!-- Brand Typography Reveal -->
-      <div class="intro-brand-reveal">
-        <span class="intro-eyebrow">HIGH FINE JEWELRY & RARE GEMS</span>
-        <h1 class="intro-brand-title">BLUE MERIDIAN</h1>
-        <div class="intro-ornament-line">
-          <span class="intro-line-l"></span>
-          <i class="fa-solid fa-gem intro-gem-sparkle"></i>
-          <span class="intro-line-r"></span>
-        </div>
-        <p class="intro-provenance">CEYLON • EST. RATNAPURA</p>
-      </div>
-
-      <!-- Action & Progress Bar -->
-      <div class="intro-action-container">
-        <button class="intro-enter-btn" id="introEnterBtn">
-          <span>ENTER THE VAULT</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-        <div class="intro-progress-bar">
-          <div class="intro-progress-fill" id="introProgressFill"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Skip Button in Corner -->
-    <button class="intro-skip-corner" id="introSkipBtn" title="Skip to Vault">
-      <span>Skip Intro</span>
-      <i class="fa-solid fa-forward-step"></i>
-    </button>
-  </div>
-
-  <!-- Top Announcement Bar -->
-  <div class="announcement-bar" id="announcementBar">
-    <div class="container announcement-content">
-      <div class="announcement-badge"><i class="fa-solid fa-gem"></i> Ceylon Heritage Salon</div>
-      <p class="announcement-text">Private Viewings in Colombo & London • Insured Global Courier & Sealed GIA / NGJA Dossiers</p>
-      <div class="announcement-actions">
-        <span class="concierge-hotline"><i class="fa-solid fa-phone"></i> Private Concierge: +94 11 234 5678</span>
-      </div>
-    </div>
-  </div>
+<body class="luxury-theme figma-blueprint">
 
   <!-- Main Navigation Header -->
-  <header class="main-header" id="mainHeader">
-    <div class="container nav-container">
-      <!-- Mobile Menu Button -->
-      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
-        <i class="fa-solid fa-bars-staggered"></i>
-      </button>
-
+  <header class="figma-header" id="mainHeader">
+    <div class="container figma-header-inner">
       <!-- Brand Logo -->
-      <a href="#hero" class="brand-logo" id="brandLogo">
-        <span class="logo-mark">
-          <svg viewBox="0 0 40 40" class="gem-vector" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="20,2 38,12 38,28 20,38 2,28 2,12" stroke="url(#goldGrad)" stroke-width="1.8" fill="rgba(37, 99, 235, 0.15)"/>
-            <polygon points="20,8 32,15 32,25 20,32 8,25 8,15" stroke="url(#goldGrad)" stroke-width="1" fill="rgba(56, 189, 248, 0.25)"/>
-            <circle cx="20" cy="20" r="3.5" fill="#fce08b"/>
-            <defs>
-              <linearGradient id="goldGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#FCE08B"/>
-                <stop offset="0.5" stop-color="#DFB448"/>
-                <stop offset="1" stop-color="#9A7322"/>
-              </linearGradient>
-            </defs>
+      <a href="#hero" class="figma-brand" aria-label="Blue Meridian Homepage">
+        <div class="figma-logo-emblem">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="22,3 39,11 39,33 22,41 5,33 5,11" stroke="#e0b85a" stroke-width="1.8" fill="rgba(224, 184, 90, 0.05)"/>
+            <polygon points="22,9 33,14 33,30 22,35 11,30 11,14" stroke="#f3d99d" stroke-width="1.2" fill="none"/>
+            <line x1="22" y1="3" x2="22" y2="41" stroke="#e0b85a" stroke-width="1.2"/>
+            <line x1="5" y1="22" x2="39" y2="22" stroke="#e0b85a" stroke-width="1.2"/>
+            <circle cx="22" cy="22" r="3.2" fill="#e0b85a"/>
           </svg>
-        </span>
-        <div class="logo-text">
-          <span class="logo-primary">BLUE MERIDIAN</span>
-          <span class="logo-tagline">CEYLON FINE GEMS & JEWELRY</span>
+        </div>
+        <div class="figma-brand-text">
+          <span class="figma-brand-title">BLUE MERIDIAN</span>
+          <span class="figma-brand-subtitle">FINE CEYLON GEMS</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="nav-links" id="navLinks">
-        <a href="#hero" class="nav-item active">Home</a>
-        <a href="#vault" class="nav-item">Collection</a>
-        <a href="#bespoke" class="nav-item">Bespoke Atelier</a>
-        <a href="#heritage" class="nav-item">Ceylon Heritage</a>
-        <a href="#verify" class="nav-item">Lab Verification</a>
-        <a href="#contact" class="nav-item">Private Salon</a>
+      <!-- Center Navigation Links -->
+      <nav class="figma-nav" id="mainNav" aria-label="Primary Navigation">
+        <a href="#hero" class="figma-nav-link active">Home</a>
+        <a href="#browse-gemstones" class="figma-nav-link">Gemstones</a>
+        <a href="#fine-jewellery" class="figma-nav-link">Jewellery</a>
+        <a href="#heritage" class="figma-nav-link">Gemstone Guide</a>
+        <a href="#heritage" class="figma-nav-link">About Us</a>
+        <a href="#footer" class="figma-nav-link">Contact</a>
       </nav>
 
-      <!-- Right Utility Actions -->
-      <div class="header-utilities">
-        <!-- Currency Selector -->
+      <!-- Right Utilities -->
+      <div class="figma-header-utilities">
+        <!-- Currency Switcher -->
         <div class="currency-dropdown" id="currencyDropdown">
           <button class="currency-toggle-btn" id="currencyToggleBtn" aria-label="Select Currency">
             <span class="currency-symbol" id="currentCurrencySymbol">$</span>
@@ -177,838 +69,1040 @@
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="currency-menu" id="currencyMenu">
-            <button class="currency-option active" data-currency="USD" data-symbol="$" data-rate="1">
-              <span class="curr-flag">🇺🇸</span> USD ($)
-            </button>
-            <button class="currency-option" data-currency="LKR" data-symbol="Rs" data-rate="305">
-              <span class="curr-flag">🇱🇰</span> LKR (Rs)
-            </button>
-            <button class="currency-option" data-currency="EUR" data-symbol="€" data-rate="0.92">
-              <span class="curr-flag">🇪🇺</span> EUR (€)
-            </button>
-            <button class="currency-option" data-currency="GBP" data-symbol="£" data-rate="0.78">
-              <span class="curr-flag">🇬🇧</span> GBP (£)
-            </button>
+            <button class="currency-option active" data-currency="USD" data-symbol="$" data-rate="1">USD ($)</button>
+            <button class="currency-option" data-currency="LKR" data-symbol="Rs" data-rate="305">LKR (Rs)</button>
+            <button class="currency-option" data-currency="EUR" data-symbol="€" data-rate="0.92">EUR (€)</button>
+            <button class="currency-option" data-currency="GBP" data-symbol="£" data-rate="0.78">GBP (£)</button>
           </div>
         </div>
 
-        <!-- Cinema Intro Trigger -->
-        <button class="icon-utility-btn" id="headerReplayIntroBtn" title="Play Brand Cinema Intro" aria-label="Play Brand Cinema Intro">
-          <i class="fa-solid fa-film"></i>
-        </button>
-
-        <!-- Search Icon Trigger -->
-        <button class="icon-utility-btn" id="searchTriggerBtn" title="Search Vault">
+        <!-- Search Trigger -->
+        <button class="figma-icon-btn" id="searchTriggerBtn" title="Search Gemstones" aria-label="Search Gemstones">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
 
-        <!-- Wishlist Icon -->
-        <button class="icon-utility-btn" id="wishlistTriggerBtn" title="Saved Jewels">
+        <!-- Wishlist Trigger -->
+        <button class="figma-icon-btn" id="wishlistTriggerBtn" title="Saved Wishlist" aria-label="View Saved Gems">
           <i class="fa-regular fa-heart"></i>
-          <span class="utility-badge" id="wishlistCountBadge">0</span>
+          <span class="figma-badge" id="wishlistBadge">0</span>
         </button>
 
-        <!-- Cart / Bag Trigger -->
-        <button class="icon-utility-btn cart-btn" id="cartTriggerBtn" title="Collector's Bag">
+        <!-- Cart Trigger -->
+        <button class="figma-icon-btn" id="cartTriggerBtn" title="Shopping Bag" aria-label="Shopping Bag">
           <i class="fa-solid fa-bag-shopping"></i>
-          <span class="utility-badge" id="cartCountBadge">0</span>
+          <span class="figma-badge" id="cartBadge">0</span>
+        </button>
+
+        <!-- WhatsApp Pill CTA in Header -->
+        <a href="https://wa.me/94771234567?text=Hello%20Blue%20Meridian,%20I%20would%20like%20a%20gemstone%20consultation" target="_blank" rel="noopener noreferrer" class="figma-whatsapp-header-btn" aria-label="Chat on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>WHATSAPP</span>
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button class="figma-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
 
-    <!-- Collapsible Search Bar Header -->
-    <div class="header-search-bar" id="headerSearchBar">
-      <div class="container search-bar-container">
-        <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
-        <input type="text" id="liveSearchInput" placeholder="Search by gemstone name, cut (e.g. cushion, oval), carat or origin..." autocomplete="off">
-        <button class="close-search-btn" id="closeSearchBtn"><i class="fa-solid fa-xmark"></i></button>
+    <!-- Search Bar Dropdown -->
+    <div class="figma-search-bar" id="headerSearchBar">
+      <div class="container figma-search-container">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="liveSearchInput" placeholder="Search by gemstone name, origin (e.g. Ratnapura), cut or carat..." autocomplete="off">
+        <button class="figma-search-close" id="closeSearchBtn" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
       </div>
     </div>
   </header>
 
+  <!-- Mobile Navigation Drawer -->
+  <aside class="figma-mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="drawer-brand">
+        <span class="figma-brand-title">BLUE MERIDIAN</span>
+        <span class="figma-brand-subtitle">FINE CEYLON GEMS</span>
+      </div>
+      <button class="drawer-close" id="mobileDrawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="drawer-links">
+      <a href="#hero" class="drawer-link">Home</a>
+      <a href="#browse-gemstones" class="drawer-link">Gemstones</a>
+      <a href="#fine-jewellery" class="drawer-link">Jewellery</a>
+      <a href="#heritage" class="drawer-link">Gemstone Guide</a>
+      <a href="#heritage" class="drawer-link">About Us</a>
+      <a href="#footer" class="drawer-link">Contact</a>
+    </nav>
+    <div class="drawer-footer">
+      <a href="https://wa.me/94771234567" target="_blank" rel="noopener noreferrer" class="figma-whatsapp-header-btn btn-block">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WHATSAPP CONSULTATION</span>
+      </a>
+    </div>
+  </aside>
+
   <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="hero-background-wrapper">
-      <img src="assets/images/hero_gemstone.jpg" alt="Natural unheated Ceylon Royal Blue Sapphire faceted to perfection" class="hero-bg-img" fetchpriority="high">
-      <div class="hero-overlay-gradient"></div>
+  <section class="figma-hero" id="hero">
+    <div class="figma-hero-bg">
+      <img src="assets/images/figma_hero_canvas.jpg" alt="Atmospheric Ceylon Sapphire Ring" class="figma-hero-img" fetchpriority="high">
+      <div class="figma-hero-overlay"></div>
     </div>
 
-    <div class="container hero-content-container">
-      <div class="hero-content">
-        <div class="hero-eyebrow">
+    <div class="container figma-hero-content">
+      <div class="figma-hero-badge">
+        <span class="badge-star">✦</span> AUTHENTIC CEYLON GEMSTONES SINCE 1986 <span class="badge-star">✦</span>
+      </div>
+
+      <h1 class="figma-hero-title">
+        Discover the<br>
+        Beauty<br>
+        <span class="hero-italic-gold">of Sri Lankan</span><br>
+        Gemstones
+      </h1>
+
+      <p class="figma-hero-desc">
+        Authentic Ceylon gems, carefully selected and independently certified.<br>
+        From the mines of Ratnapura to collectors in 48 countries.
+      </p>
+
+      <div class="figma-hero-actions">
+        <a href="#browse-gemstones" class="figma-btn figma-btn-primary">EXPLORE COLLECTION</a>
+        <a href="https://wa.me/94771234567?text=Hello%20Blue%20Meridian,%20I%20would%20like%20to%20request%20a%20free%20consultation" target="_blank" rel="noopener noreferrer" class="figma-btn figma-btn-outline">FREE CONSULTATION</a>
+      </div>
+
+      <div class="figma-hero-scroll">
+        <span class="scroll-text">SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Stats Bar -->
+  <section class="figma-stats-bar" id="statsBar">
+    <div class="container figma-stats-grid">
+      <div class="figma-stat-item">
+        <div class="stat-number">2,500<span class="plus">+</span></div>
+        <div class="stat-label">Years of Heritage</div>
+      </div>
+      <div class="figma-stat-item">
+        <div class="stat-number">5,000<span class="plus">+</span></div>
+        <div class="stat-label">Stones Certified</div>
+      </div>
+      <div class="figma-stat-item">
+        <div class="stat-number">48<span class="plus">+</span></div>
+        <div class="stat-label">Countries Served</div>
+      </div>
+      <div class="figma-stat-item">
+        <div class="stat-number">100<span class="plus">%</span></div>
+        <div class="stat-label">Authentic Certified</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Browse by Gemstone Section -->
+  <section class="figma-section figma-browse-section" id="browse-gemstones">
+    <div class="container">
+      <div class="figma-section-header text-center">
+        <div class="figma-eyebrow">
           <span class="eyebrow-line"></span>
-          <span class="eyebrow-text">CEYLON HIGH GEMOLOGY • RATNAPURA</span>
+          <span>EXPLORE OUR COLLECTION</span>
           <span class="eyebrow-line"></span>
         </div>
-
-        <h1 class="hero-title">
-          Discover the Rare Beauty of <br><span class="title-highlight">Sri Lankan</span> <span class="title-sub-gold">Gemstones</span> & Fine Jewelry
-        </h1>
-
-        <p class="hero-lead">
-          Directly sourced from the historic alluvial gravels of Ratnapura and Elahera. We curate unheated royal blue sapphires, natural padparadscha, and exceptional collector stones — certified by GIA and the National Gem & Jewellery Authority, faceted by master Sri Lankan lapidaries.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="#vault" class="btn btn-primary btn-gold-gleam">
-            <span>Explore The Collection</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="#bespoke" class="btn btn-glass-luxury">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <span>Commission Bespoke Piece</span>
-          </a>
-        </div>
-
-        <!-- Trust Badges Bar -->
-        <div class="hero-stats-bar">
-          <div class="stat-item">
-            <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <div class="stat-text">
-              <strong>100% Conflict-Free</strong>
-              <span>Ethically Pit-Mined in Ceylon</span>
-            </div>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
-            <div class="stat-text">
-              <strong>Independent Verification</strong>
-              <span>GIA & NGJA Sealed Reports</span>
-            </div>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <div class="stat-icon"><i class="fa-solid fa-plane-lock"></i></div>
-            <div class="stat-text">
-              <strong>Insured Global Transit</strong>
-              <span>Direct Brink's & Malca-Amit</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <a href="#vault" class="scroll-down-indicator" aria-label="Scroll to collection">
-      <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
-      <span class="scroll-label">VIEW COLLECTION</span>
-    </a>
-  </section>
-
-  <!-- Curator's Spotlight / Key Highlights Bar -->
-  <section class="curator-spotlight-section">
-    <div class="container">
-      <div class="spotlight-strip">
-        <div class="strip-item">
-          <span class="strip-number">01</span>
-          <div class="strip-info">
-            <h4>Unheated Corundum</h4>
-            <p>Genuine geological rarity with zero thermal enhancement or diffusion.</p>
-          </div>
-        </div>
-        <div class="strip-item">
-          <span class="strip-number">02</span>
-          <div class="strip-info">
-            <h4>Master Lapidary</h4>
-            <p>Custom precision faceting designed to showcase internal fire and velvety saturation.</p>
-          </div>
-        </div>
-        <div class="strip-item">
-          <span class="strip-number">03</span>
-          <div class="strip-info">
-            <h4>High Fine Jewelry</h4>
-            <p>Crafted in Colombo & London using solid 950 Platinum and 18k gold.</p>
-          </div>
-        </div>
-        <div class="strip-item">
-          <span class="strip-number">04</span>
-          <div class="strip-info">
-            <h4>Direct Provenance</h4>
-            <p>Unbroken custody documentation directly from artisanal Sri Lankan pit mines.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- The Gem Vault (E-Commerce Catalog & Filter Section) -->
-  <section class="vault-section" id="vault">
-    <div class="container">
-      <!-- Section Header -->
-      <div class="section-heading text-center">
-        <span class="section-sub">THE PRIVATE CURATION</span>
-        <h2 class="section-title">The Gemstone Collection</h2>
-        <div class="heading-ornament">
-          <span class="ornament-line"></span>
-          <i class="fa-solid fa-diamond"></i>
-          <span class="ornament-line"></span>
-        </div>
-        <p class="section-desc">
-          Discover our reserve of certified, unheated Sri Lankan gemstones and high jewelry creations. Filter by variety, cut, and carat weight.
+        <h2 class="figma-section-title">Browse by Gemstone</h2>
+        <p class="figma-section-subtitle">
+          From the legendary Ceylon Blue Sapphire to the mystical Alexandrite — each stone a marvel of nature.
         </p>
       </div>
 
-      <!-- Controls & Filter Toolbar -->
-      <div class="vault-filter-toolbar">
-        <!-- Category Pill Tabs -->
-        <div class="category-tabs" id="categoryTabs">
-          <button class="cat-pill active" data-category="all">
-            <i class="fa-solid fa-gem"></i> All Gemstones
-          </button>
-          <button class="cat-pill" data-category="blue-sapphire">
-            <span class="color-dot dot-blue"></span> Royal Blue Sapphires
-          </button>
-          <button class="cat-pill" data-category="padparadscha">
-            <span class="color-dot dot-padparadscha"></span> Padparadscha
-          </button>
-          <button class="cat-pill" data-category="ruby">
-            <span class="color-dot dot-ruby"></span> Ceylon Rubies
-          </button>
-          <button class="cat-pill" data-category="star-sapphire">
-            <span class="color-dot dot-star"></span> Star Sapphires
-          </button>
-          <button class="cat-pill" data-category="rare-collector">
-            <span class="color-dot dot-yellow"></span> Rare Collector Stones
-          </button>
-          <button class="cat-pill" data-category="bespoke-jewelry">
-            <i class="fa-solid fa-ring"></i> Fine Jewelry
-          </button>
+      <div class="figma-categories-grid">
+        <!-- 1. Blue Sapphire -->
+        <div class="figma-cat-card" data-category="blue-sapphire">
+          <div class="cat-img-wrapper">
+            <img src="assets/images/cat_blue_sapphire.jpg" alt="Ceylon Blue Sapphire" class="cat-img" loading="lazy">
+            <div class="cat-img-overlay"></div>
+          </div>
+          <div class="cat-content">
+            <h3 class="cat-title">Blue Sapphire</h3>
+            <p class="cat-subtitle">The Crown of Ceylon</p>
+          </div>
         </div>
 
-        <!-- Filter Sub-Bar (Cut, Carat, Sort, Active Status) -->
-        <div class="filter-sub-bar">
-          <div class="filter-dropdown-group">
-            <!-- Cut Filter -->
-            <div class="select-wrapper">
-              <label for="cutFilterSelect" class="filter-label"><i class="fa-solid fa-shapes"></i> Cut:</label>
-              <select id="cutFilterSelect" class="custom-select">
-                <option value="all">All Facet Cuts</option>
-                <option value="cushion">Cushion Cut</option>
-                <option value="oval">Oval Cut</option>
-                <option value="emerald">Emerald Step Cut</option>
-                <option value="radiant">Radiant Cut</option>
-                <option value="cabochon">Cabochon (Star)</option>
-              </select>
-            </div>
-
-            <!-- Carat Weight Slider -->
-            <div class="carat-slider-box">
-              <label for="caratRangeInput" class="filter-label">
-                <i class="fa-solid fa-weight-scale"></i> Min Carat: <span id="caratValueDisplay">2.0 ct</span>
-              </label>
-              <input type="range" id="caratRangeInput" min="2.0" max="12.0" step="0.5" value="2.0" class="custom-slider">
-            </div>
-
-            <!-- Sort Selector -->
-            <div class="select-wrapper">
-              <label for="sortSelect" class="filter-label"><i class="fa-solid fa-arrow-down-wide-short"></i> Sort:</label>
-              <select id="sortSelect" class="custom-select">
-                <option value="featured">Curator's Choice</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="carat-desc">Carat: Largest First</option>
-              </select>
-            </div>
+        <!-- 2. Ruby -->
+        <div class="figma-cat-card" data-category="ruby">
+          <div class="cat-img-wrapper">
+            <img src="assets/images/cat_ruby.jpg" alt="Ceylon Pigeon Blood Ruby" class="cat-img" loading="lazy">
+            <div class="cat-img-overlay"></div>
           </div>
+          <div class="cat-content">
+            <h3 class="cat-title">Ruby</h3>
+            <p class="cat-subtitle">Pigeon Blood Brilliance</p>
+          </div>
+        </div>
 
-          <div class="results-count-wrapper">
-            <span class="results-count" id="resultsCount">Showing 8 Treasures</span>
-            <button class="reset-filter-btn" id="resetFilterBtn" title="Reset all filters"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+        <!-- 3. Star Sapphire -->
+        <div class="figma-cat-card" data-category="star-sapphire">
+          <div class="cat-img-wrapper">
+            <img src="assets/images/cat_star_sapphire.jpg" alt="Natural Ceylon Star Sapphire" class="cat-img" loading="lazy">
+            <div class="cat-img-overlay"></div>
+          </div>
+          <div class="cat-content">
+            <h3 class="cat-title">Star Sapphire</h3>
+            <p class="cat-subtitle">Six-Ray Wonder</p>
+          </div>
+        </div>
+
+        <!-- 4. Alexandrite -->
+        <div class="figma-cat-card" data-category="alexandrite">
+          <div class="cat-img-wrapper">
+            <img src="assets/images/cat_alexandrite.jpg" alt="Rare Ceylon Alexandrite" class="cat-img" loading="lazy">
+            <div class="cat-img-overlay"></div>
+          </div>
+          <div class="cat-content">
+            <h3 class="cat-title">Alexandrite</h3>
+            <p class="cat-subtitle">The Chameleon Gem</p>
+          </div>
+        </div>
+
+        <!-- 5. Cat's Eye -->
+        <div class="figma-cat-card" data-category="cats-eye">
+          <div class="cat-img-wrapper">
+            <img src="assets/images/cat_cats_eye.jpg" alt="Chrysoberyl Cat's Eye" class="cat-img" loading="lazy">
+            <div class="cat-img-overlay"></div>
+          </div>
+          <div class="cat-content">
+            <h3 class="cat-title">Cat's Eye</h3>
+            <p class="cat-subtitle">Chatoyant Mystique</p>
+          </div>
+        </div>
+
+        <!-- 6. Emerald -->
+        <div class="figma-cat-card" data-category="emerald">
+          <div class="cat-img-wrapper">
+            <img src="assets/images/cat_emerald.jpg" alt="Natural Emerald" class="cat-img" loading="lazy">
+            <div class="cat-img-overlay"></div>
+          </div>
+          <div class="cat-content">
+            <h3 class="cat-title">Emerald</h3>
+            <p class="cat-subtitle">Tropical Lush Green</p>
           </div>
         </div>
       </div>
 
-      <!-- Gemstone Product Grid -->
-      <div class="gemstones-grid" id="gemstonesGrid">
-        <!-- Injected dynamically via app.js -->
-      </div>
-
-      <!-- Empty State Indicator -->
-      <div class="empty-results-state hidden" id="emptyResultsState">
-        <div class="empty-icon"><i class="fa-regular fa-gem"></i></div>
-        <h3>No Gemstones Match Your Filter Criteria</h3>
-        <p>Try expanding your carat weight range or selecting another category.</p>
-        <button class="btn btn-glass-luxury" id="emptyResetBtn">Reset All Filters</button>
+      <div class="figma-center-action">
+        <a href="#featured-gemstones" class="figma-btn figma-btn-outline">VIEW ALL CATEGORIES →</a>
       </div>
     </div>
   </section>
 
-  <!-- Bespoke Jewelry Atelier Section -->
-  <section class="bespoke-atelier-section" id="bespoke">
+  <!-- Why Collectors Trust Us Section -->
+  <section class="figma-section figma-trust-section" id="trust-promise">
     <div class="container">
-      <div class="bespoke-grid">
-        <!-- Left: Interactive Atelier Configurator -->
-        <div class="atelier-configurator-card">
-          <div class="atelier-header">
-            <span class="atelier-eyebrow"><i class="fa-solid fa-wand-magic-sparkles"></i> PRIVATE COMMISSIONS</span>
-            <h3 class="atelier-title">Bespoke Jewelry Atelier</h3>
-            <p class="atelier-intro">
-              Design a one-of-a-kind heirloom engagement ring or custom fine jewelry piece around a certified Ceylon natural center stone.
-            </p>
-          </div>
+      <div class="figma-section-header text-center">
+        <div class="figma-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span>THE LANKA GEM PROMISE</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="figma-section-title">Why Collectors Trust Us</h2>
+      </div>
 
-          <!-- Step 1: Center Gemstone -->
-          <div class="config-step">
-            <div class="step-label-row">
-              <span class="step-badge">1</span>
-              <h4 class="step-heading">Select Center Ceylon Gemstone</h4>
-            </div>
-            <div class="gemstone-selector-grid" id="bespokeGemstoneGrid">
-              <button class="bespoke-gem-btn active" data-stone="Royal Blue Sapphire" data-base-price="14500" data-img="assets/images/gem_ceylon_blue.jpg">
-                <img src="assets/images/gem_ceylon_blue.jpg" alt="Royal Blue Sapphire">
-                <span class="gem-name">Royal Blue Sapphire</span>
-                <span class="gem-price">+$14,500</span>
-              </button>
-              <button class="bespoke-gem-btn" data-stone="Ceylon Padparadscha" data-base-price="22000" data-img="assets/images/gem_padparadscha.jpg">
-                <img src="assets/images/gem_padparadscha.jpg" alt="Padparadscha Sapphire">
-                <span class="gem-name">Padparadscha</span>
-                <span class="gem-price">+$22,000</span>
-              </button>
-              <button class="bespoke-gem-btn" data-stone="Pigeon Blood Ruby" data-base-price="18500" data-img="assets/images/gem_ruby.jpg">
-                <img src="assets/images/gem_ruby.jpg" alt="Ceylon Ruby">
-                <span class="gem-name">Pigeon Blood Ruby</span>
-                <span class="gem-price">+$18,500</span>
-              </button>
-              <button class="bespoke-gem-btn" data-stone="Golden Yellow Sapphire" data-base-price="11200" data-img="assets/images/gem_yellow_sapphire.jpg">
-                <img src="assets/images/gem_yellow_sapphire.jpg" alt="Yellow Sapphire">
-                <span class="gem-name">Yellow Sapphire</span>
-                <span class="gem-price">+$11,200</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Step 2: Precious Metal -->
-          <div class="config-step">
-            <div class="step-label-row">
-              <span class="step-badge">2</span>
-              <h4 class="step-heading">Choose Precious Noble Metal</h4>
-            </div>
-            <div class="metal-selector-group" id="bespokeMetalGroup">
-              <button class="metal-pill active" data-metal="Platinum 950" data-metal-price="2400">
-                <span class="metal-sample metal-platinum"></span> Platinum 950
-              </button>
-              <button class="metal-pill" data-metal="18k Yellow Gold" data-metal-price="1950">
-                <span class="metal-sample metal-yellow-gold"></span> 18k Yellow Gold
-              </button>
-              <button class="metal-pill" data-metal="18k Rose Gold" data-metal-price="1950">
-                <span class="metal-sample metal-rose-gold"></span> 18k Rose Gold
-              </button>
-              <button class="metal-pill" data-metal="18k White Gold" data-metal-price="1850">
-                <span class="metal-sample metal-white-gold"></span> 18k White Gold
-              </button>
-            </div>
-          </div>
-
-          <!-- Step 3: Setting Style -->
-          <div class="config-step">
-            <div class="step-label-row">
-              <span class="step-badge">3</span>
-              <h4 class="step-heading">Select Setting Architecture</h4>
-            </div>
-            <div class="setting-selector-group" id="bespokeSettingGroup">
-              <button class="setting-pill active" data-setting="Micro-Pavé Diamond Halo" data-setting-price="3200">
-                <i class="fa-regular fa-circle-dot"></i> Micro-Pavé Halo (+<span class="dyn-val">$3,200</span>)
-              </button>
-              <button class="setting-pill" data-setting="Three-Stone Tapered Baguette" data-setting-price="2800">
-                <i class="fa-solid fa-ellipsis"></i> Three-Stone Trilogy (+<span class="dyn-val">$2,800</span>)
-              </button>
-              <button class="setting-pill" data-setting="Solitaire Four-Prong Cathedral" data-setting-price="1400">
-                <i class="fa-regular fa-gem"></i> Solitaire Cathedral (+<span class="dyn-val">$1,400</span>)
-              </button>
-            </div>
-          </div>
-
-          <!-- Live Atelier Summary & Total -->
-          <div class="atelier-price-summary">
-            <div class="summary-details">
-              <span class="summary-spec-text" id="bespokeSummaryText">Royal Blue Sapphire • Platinum 950 • Micro-Pavé Diamond Halo</span>
-              <div class="summary-price-wrapper">
-                <span class="summary-label">Estimated Valuation:</span>
-                <span class="summary-total" id="bespokeTotalPrice">$20,100</span>
-              </div>
-            </div>
-            <div class="atelier-btn-group">
-              <button class="btn btn-primary" id="addBespokeToBagBtn">
-                <i class="fa-solid fa-bag-shopping"></i> Add Bespoke Creation
-              </button>
-              <button class="btn btn-glass-luxury" id="inquireBespokeBtn">
-                <i class="fa-solid fa-envelope-open-text"></i> Book Atelier Appointment
-              </button>
-            </div>
-          </div>
+      <div class="figma-promise-grid">
+        <!-- 1. Certification -->
+        <div class="figma-promise-card">
+          <div class="promise-icon"><i class="fa-solid fa-gem"></i></div>
+          <span class="promise-category">CERTIFICATION</span>
+          <h3 class="promise-title">GIA • AGL • GRS • Gübelin</h3>
+          <p class="promise-desc">Every stone independently certified by the world's leading laboratories. Full documentation of origin, treatment and quality.</p>
         </div>
 
-        <!-- Right: Visual Ring Preview Showcase -->
-        <div class="atelier-visual-preview">
-          <div class="preview-glow-backdrop"></div>
-          <div class="preview-card-interior">
-            <div class="preview-badge-status">MASTER CRAFTSMANSHIP PREVIEW</div>
-            <div class="preview-ring-frame">
-              <img src="assets/images/bespoke_ring.jpg" alt="Bespoke Ceylon Sapphire Ring" id="bespokePreviewImage" class="preview-ring-img">
-              <div class="ring-facet-shimmer"></div>
-            </div>
-            <div class="preview-caption-box">
-              <h4 id="previewRingTitle">The Sovereign Sapphire Ring</h4>
-              <p id="previewRingSpecs">Unheated 5.42 ct Cushion Ceylon Sapphire set with 0.85 ct F/VVS collection-grade natural pavé diamonds.</p>
-              <div class="provenance-seal">
-                <i class="fa-solid fa-stamp"></i> Hallmarked at Colombo Goldsmiths Guild & London Assay Office
-              </div>
-            </div>
-          </div>
+        <!-- 2. Transparency -->
+        <div class="figma-promise-card">
+          <div class="promise-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+          <span class="promise-category">TRANSPARENCY</span>
+          <h3 class="promise-title">Direct Mine Sourcing</h3>
+          <p class="promise-desc">We source directly from licensed miners in Ratnapura, Elahera and Matara — complete supply chain transparency.</p>
+        </div>
+
+        <!-- 3. Expertise -->
+        <div class="figma-promise-card">
+          <div class="promise-icon"><i class="fa-solid fa-certificate"></i></div>
+          <span class="promise-category">EXPERTISE</span>
+          <h3 class="promise-title">GIA-Trained Gemologists</h3>
+          <p class="promise-desc">Our in-house experts hand-select every stone, rejecting over 70% of what they examine for not meeting our standards.</p>
+        </div>
+
+        <!-- 4. Protection -->
+        <div class="figma-promise-card">
+          <div class="promise-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <span class="promise-category">PROTECTION</span>
+          <h3 class="promise-title">Insured Global Shipping</h3>
+          <p class="promise-desc">Fully insured express delivery to 48+ countries with real-time tracking, discreet packaging and signature confirmation.</p>
+        </div>
+
+        <!-- 5. Confidence -->
+        <div class="figma-promise-card">
+          <div class="promise-icon"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+          <span class="promise-category">CONFIDENCE</span>
+          <h3 class="promise-title">30-Day Returns</h3>
+          <p class="promise-desc">Return any stone within 30 days for a full refund. No conditions, no questions — your confidence is our priority.</p>
+        </div>
+
+        <!-- 6. Craftsmanship -->
+        <div class="figma-promise-card">
+          <div class="promise-icon"><i class="fa-solid fa-ring"></i></div>
+          <span class="promise-category">CRAFTSMANSHIP</span>
+          <h3 class="promise-title">Custom Jewellery</h3>
+          <p class="promise-desc">Transform your chosen gemstone into a bespoke ring, pendant or earrings by our master craftsmen in Colombo.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- The Ceylon Heritage & Responsible Mining Section -->
-  <section class="heritage-section" id="heritage">
+  <!-- Featured Gemstones Section -->
+  <section class="figma-section figma-featured-section" id="featured-gemstones">
     <div class="container">
-      <div class="heritage-grid">
-        <!-- Left: Image & Exhibition Quote Badge -->
-        <div class="heritage-imagery-container">
-          <div class="heritage-image-frame">
-            <img src="assets/images/artisan_lapidary.jpg" alt="Sri Lankan Master Lapidary artisan cutting sapphire on wheel" class="heritage-primary-img">
+      <div class="figma-split-header">
+        <div>
+          <div class="figma-eyebrow left">
+            <span>EDITOR'S SELECTION</span>
+            <span class="eyebrow-line"></span>
           </div>
-          <div class="heritage-quote-badge">
-            <i class="fa-solid fa-quote-left"></i>
-            <p>"Ceylon is the island from whose streams diamonds and sapphires flow like water."</p>
-            <cite>— Marco Polo, 1292 AD</cite>
-          </div>
+          <h2 class="figma-section-title">Featured Gemstones</h2>
         </div>
-
-        <!-- Right: Storytelling & Values -->
-        <div class="heritage-content">
-          <span class="section-sub">THE LEGEND OF RATNAPURA</span>
-          <h2 class="section-title">2,500 Years of Gemological Royalty</h2>
-          <div class="heading-ornament">
-            <span class="ornament-line"></span>
-            <i class="fa-solid fa-mountain-sun"></i>
-            <span class="ornament-line"></span>
-          </div>
-
-          <p class="heritage-paragraph">
-            Sri Lanka (formerly Ceylon) is renowned across antiquities as <em>Ratna-Dweepa</em> — the "Island of Gems." From King Solomon courting the Queen of Sheba to the British Crown Jewels and Princess Diana's iconic engagement ring, Ceylon sapphires have adorned royalty for millennia.
-          </p>
-
-          <p class="heritage-paragraph">
-            At Blue Meridian, we operate an unbroken chain of custody. We partner directly with multigenerational pit-miners in Ratnapura and Elahera who practice non-invasive, artisanal gravel washing that preserves Sri Lanka’s lush rainforest ecosystem.
-          </p>
-
-          <div class="heritage-features-list">
-            <div class="heritage-feat-card">
-              <div class="feat-icon"><i class="fa-solid fa-leaf"></i></div>
-              <div class="feat-body">
-                <h5>Eco-Restorative Mining</h5>
-                <p>Mined shafts are backfilled and re-planted with native mahogany and tea foliage to maintain groundwater harmony.</p>
-              </div>
-            </div>
-
-            <div class="heritage-feat-card">
-              <div class="feat-icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
-              <div class="feat-body">
-                <h5>Fair-Share Miner Royalties</h5>
-                <p>Our extraction teams share in the final polished value of each gemstone, empowering artisanal mining communities.</p>
-              </div>
-            </div>
-
-            <div class="heritage-feat-card">
-              <div class="feat-icon"><i class="fa-solid fa-compass-drafting"></i></div>
-              <div class="feat-body">
-                <h5>Master Sri Lankan Lapidary</h5>
-                <p>Every stone is hand-faceted by master gem cutters holding decades of intuition to maximize internal fire and color saturation.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gemological Lab Certification & Verification Section -->
-  <section class="verify-section" id="verify">
-    <div class="container">
-      <div class="section-heading text-center">
-        <span class="section-sub">PROVENANCE & INDEPENDENT CERTIFICATION</span>
-        <h2 class="section-title">Independent Gemological Report Verification</h2>
-        <div class="heading-ornament">
-          <span class="ornament-line"></span>
-          <i class="fa-solid fa-file-shield"></i>
-          <span class="ornament-line"></span>
-        </div>
-        <p class="section-desc">
-          Every gemstone curated by Blue Meridian is accompanied by an independent laboratory report from the Gemological Institute of America (GIA) or Sri Lanka's National Gem & Jewellery Authority (NGJA). Enter a report code below to examine verified archive specifications.
-        </p>
+        <a href="#browse-gemstones" class="figma-btn figma-btn-outline">VIEW ALL GEMSTONES →</a>
       </div>
 
-      <!-- Verification Input Widget -->
-      <div class="verify-widget-card">
-        <div class="verify-input-form">
-          <div class="verify-input-group">
-            <i class="fa-solid fa-barcode"></i>
-            <input type="text" id="certNumberInput" placeholder="Enter Certificate # (e.g. GIA-64210985 or NGJA-SL-8921)" autocomplete="off">
-            <button class="btn btn-primary" id="verifyCertBtn">
-              <i class="fa-solid fa-fingerprint"></i>
-              <span>Verify Report</span>
+      <div class="figma-products-grid" id="featuredGemstonesGrid">
+        <!-- 1. Royal Blue Sapphire -->
+        <article class="figma-product-card" data-id="feat-01" data-category="blue-sapphire" data-base-price="4500" data-name="Royal Blue Sapphire">
+          <div class="card-visual">
+            <div class="card-badges">
+              <span class="badge-lab">✦ GIA</span>
+            </div>
+            <button class="card-wishlist-btn" aria-label="Save to Wishlist" data-id="feat-01">
+              <i class="fa-regular fa-heart"></i>
             </button>
+            <img src="assets/images/feat_royal_blue.jpg" alt="Royal Blue Sapphire" class="product-img" loading="lazy">
           </div>
-
-          <!-- Quick Samples -->
-          <div class="cert-quick-samples">
-            <span>Sample archive dossier numbers:</span>
-            <button class="sample-cert-tag" data-cert="GIA-64210985">GIA-64210985 (5.42ct Royal Blue)</button>
-            <button class="sample-cert-tag" data-cert="NGJA-SL-8921">NGJA-SL-8921 (3.86ct Padparadscha)</button>
-            <button class="sample-cert-tag" data-cert="GRS-2026-4412">GRS-2026-4412 (4.15ct Pigeon Blood)</button>
-          </div>
-        </div>
-
-        <!-- Verification Results Window -->
-        <div class="verify-result-window" id="verifyResultWindow">
-          <div class="cert-document-frame" id="certDocumentFrame">
-            <div class="cert-watermark">OFFICIAL DOSSIER</div>
-            <div class="cert-header">
-              <div class="cert-lab-brand">
-                <span class="cert-lab-name" id="certLabName">GEMOLOGICAL INSTITUTE OF AMERICA (GIA)</span>
-                <span class="cert-lab-loc" id="certLabLoc">Identification & Origin Laboratory Report</span>
+          <div class="card-details">
+            <div class="card-meta-top">
+              <span class="gem-type">BLUE SAPPHIRE</span>
+              <span class="gem-carat">3.45 ct</span>
+            </div>
+            <h3 class="card-title">Royal Blue Sapphire</h3>
+            <div class="card-specs">
+              <div class="spec-row">
+                <span class="spec-label">Origin</span>
+                <span class="spec-value">Ratnapura</span>
               </div>
-              <div class="cert-seal">
-                <i class="fa-solid fa-stamp"></i>
-                <span>SEALED ARCHIVE</span>
+              <div class="spec-row">
+                <span class="spec-label">Color</span>
+                <span class="spec-value">Vivid Royal Blue</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Cut</span>
+                <span class="spec-value">Oval Mixed</span>
               </div>
             </div>
-
-            <div class="cert-body-grid">
-              <div class="cert-field">
-                <span class="field-label">Report Number</span>
-                <span class="field-value highlight-gold" id="certResNumber">GIA-64210985</span>
+            <div class="card-footer-row">
+              <div class="price-container">
+                <span class="main-price" data-usd="4500">$4,500</span>
+                <span class="per-carat" data-usd-carat="1304">$1,304 / ct</span>
               </div>
-              <div class="cert-field">
-                <span class="field-label">Species & Variety</span>
-                <span class="field-value" id="certResSpecies">Natural Corundum (Sapphire)</span>
-              </div>
-              <div class="cert-field">
-                <span class="field-label">Weight</span>
-                <span class="field-value" id="certResWeight">5.42 carats</span>
-              </div>
-              <div class="cert-field">
-                <span class="field-label">Shape & Cut</span>
-                <span class="field-value" id="certResCut">Cushion Brilliant / Step Cut</span>
-              </div>
-              <div class="cert-field">
-                <span class="field-label">Color Grade</span>
-                <span class="field-value" id="certResColor">Royal Blue (Vivid Saturation)</span>
-              </div>
-              <div class="cert-field">
-                <span class="field-label">Geographic Origin</span>
-                <span class="field-value" id="certResOrigin">Sri Lanka (Ceylon)</span>
-              </div>
-              <div class="cert-field">
-                <span class="field-label">Thermal Treatment</span>
-                <span class="field-value highlight-green" id="certResTreatment">No Indications of Thermal Enhancement (Unheated)</span>
-              </div>
-              <div class="cert-field">
-                <span class="field-label">Microscopic Observations</span>
-                <span class="field-value" id="certResClarity">Eye Clean / Fine Rutile Silk (Natural Provenance Marker)</span>
-              </div>
-            </div>
-
-            <div class="cert-footer">
-              <div class="security-features">
-                <span class="sec-item"><i class="fa-solid fa-file-contract"></i> Archive Dossier on Permanent Register</span>
-                <span class="sec-item"><i class="fa-solid fa-fingerprint"></i> Microscopic Inclusion & Girdle Mapping</span>
-              </div>
-              <div class="cert-status-badge">
-                <i class="fa-solid fa-circle-check"></i> REGISTERED LAB REPORT CONFIRMED
-              </div>
+              <button class="add-to-cart-btn" data-id="feat-01" data-name="Royal Blue Sapphire" data-price="4500" data-img="assets/images/feat_royal_blue.jpg" data-spec="3.45 ct • GIA Certified">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>ADD</span>
+              </button>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </article>
 
-  <!-- Global Connoisseur Testimonials -->
-  <section class="testimonials-section">
-    <div class="container">
-      <div class="section-heading text-center">
-        <span class="section-sub">CLIENT PERSPECTIVES</span>
-        <h2 class="section-title">Reflections from Collectors</h2>
-        <div class="heading-ornament">
-          <span class="ornament-line"></span>
-          <i class="fa-solid fa-quote-right"></i>
-          <span class="ornament-line"></span>
-        </div>
-      </div>
-
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p class="testi-text">
-            "Acquiring an unheated 5.42-carat Royal Blue sapphire for an anniversary ring was an extraordinary experience. The GIA documentation, natural daylight color dispersion, and private salon guidance in Colombo were unmatched."
-          </p>
-          <div class="testi-author">
-            <span class="author-name">David & Claire Sterling</span>
-            <span class="author-loc">London, United Kingdom</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testi-text">
-            "The delicate salmon-pink balance in our 3.86-carat padparadscha is breathtaking. Seeing the pit-mining traceability and knowing royalties support the artisan miner community in Elahera makes this heirloom truly special."
-          </p>
-          <div class="testi-author">
-            <span class="author-name">Anne-Sophie Mercier</span>
-            <span class="author-loc">Geneva, Switzerland</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testi-text">
-            "A connoisseur's sanctuary. Finding untreated Ceylon star sapphires with razor-sharp 6-ray asterism and zero secondary heat treatment is genuinely rare. Blue Meridian's transparency is second to none."
-          </p>
-          <div class="testi-author">
-            <span class="author-name">H. K. Jayawardena</span>
-            <span class="author-loc">Colombo, Sri Lanka</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VIP Concierge & Contact Section -->
-  <section class="concierge-section" id="contact">
-    <div class="container">
-      <div class="concierge-card">
-        <div class="concierge-left">
-          <span class="section-sub"><i class="fa-solid fa-gem"></i> PRIVATE CLIENT SERVICES</span>
-          <h2 class="concierge-title">Consult with our Master Gemologist</h2>
-          <p class="concierge-desc">
-            Seeking a specific carat weight, rare investment parcel, or bespoke fine jewelry commission? Our private salon concierge is available for confidential appointments in Colombo and London.
-          </p>
-          <div class="concierge-contact-items">
-            <div class="c-item">
-              <i class="fa-solid fa-envelope"></i>
-              <div>
-                <strong>Private Enquiries</strong>
-                <span>concierge@bluemeridian.com</span>
-              </div>
+        <!-- 2. Cornflower Blue Sapphire -->
+        <article class="figma-product-card" data-id="feat-02" data-category="blue-sapphire" data-base-price="2800" data-name="Cornflower Blue Sapphire">
+          <div class="card-visual">
+            <div class="card-badges">
+              <span class="badge-lab">✦ AGL</span>
+              <span class="badge-tag">UNHEATED</span>
             </div>
-            <div class="c-item">
-              <i class="fa-brands fa-whatsapp"></i>
-              <div>
-                <strong>Private Concierge WhatsApp</strong>
-                <span>+94 77 123 4567</span>
-              </div>
-            </div>
-            <div class="c-item">
-              <i class="fa-solid fa-location-dot"></i>
-              <div>
-                <strong>Flagship Atelier</strong>
-                <span>Galle Face Court, Colombo 03, Sri Lanka</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="concierge-right">
-          <form class="concierge-form" id="conciergeForm">
-            <h4 class="form-title">Request Private Consultation</h4>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="cName">Full Name *</label>
-                <input type="text" id="cName" placeholder="Your name" required>
-              </div>
-              <div class="form-group">
-                <label for="cEmail">Email Address *</label>
-                <input type="email" id="cEmail" placeholder="client@private.com" required>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="cPhone">Telephone / WhatsApp</label>
-                <input type="tel" id="cPhone" placeholder="+44 / +1 / +94 ...">
-              </div>
-              <div class="form-group">
-                <label for="cInterest">Area of Interest</label>
-                <select id="cInterest" class="custom-select">
-                  <option value="Royal Blue Sapphire">Unheated Royal Blue Sapphire</option>
-                  <option value="Padparadscha">Rare Padparadscha Sapphire</option>
-                  <option value="Star Sapphire">Asterism Star Sapphire</option>
-                  <option value="Bespoke Engagement Ring">Bespoke Engagement Ring</option>
-                  <option value="Collector Portfolio">Collector Investment Portfolio</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="cMessage">Specific Requirements (Carat, Budget, Timeline)</label>
-              <textarea id="cMessage" rows="3" placeholder="Tell our gemologists what you are looking for..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">
-              <span>Submit Confidential Request</span>
-              <i class="fa-solid fa-paper-plane"></i>
+            <button class="card-wishlist-btn" aria-label="Save to Wishlist" data-id="feat-02">
+              <i class="fa-regular fa-heart"></i>
             </button>
-          </form>
+            <img src="assets/images/feat_cornflower.jpg" alt="Cornflower Blue Sapphire" class="product-img" loading="lazy">
+          </div>
+          <div class="card-details">
+            <div class="card-meta-top">
+              <span class="gem-type">BLUE SAPPHIRE</span>
+              <span class="gem-carat">2.1 ct</span>
+            </div>
+            <h3 class="card-title">Cornflower Blue Sapphire</h3>
+            <div class="card-specs">
+              <div class="spec-row">
+                <span class="spec-label">Origin</span>
+                <span class="spec-value">Elahera</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Color</span>
+                <span class="spec-value">Medium Cornflower Blue</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Cut</span>
+                <span class="spec-value">Cushion Cut</span>
+              </div>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-container">
+                <span class="main-price" data-usd="2800">$2,800</span>
+                <span class="per-carat" data-usd-carat="1333">$1,333 / ct</span>
+              </div>
+              <button class="add-to-cart-btn" data-id="feat-02" data-name="Cornflower Blue Sapphire" data-price="2800" data-img="assets/images/feat_cornflower.jpg" data-spec="2.1 ct • Unheated AGL">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>ADD</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Blue Star Sapphire -->
+        <article class="figma-product-card" data-id="feat-03" data-category="star-sapphire" data-base-price="6200" data-name="Blue Star Sapphire">
+          <div class="card-visual">
+            <div class="card-badges">
+              <span class="badge-lab">✦ GRS</span>
+              <span class="badge-tag">UNHEATED</span>
+            </div>
+            <button class="card-wishlist-btn" aria-label="Save to Wishlist" data-id="feat-03">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="assets/images/feat_star_sapphire.jpg" alt="Blue Star Sapphire" class="product-img" loading="lazy">
+          </div>
+          <div class="card-details">
+            <div class="card-meta-top">
+              <span class="gem-type">STAR SAPPHIRE</span>
+              <span class="gem-carat">8.75 ct</span>
+            </div>
+            <h3 class="card-title">Blue Star Sapphire</h3>
+            <div class="card-specs">
+              <div class="spec-row">
+                <span class="spec-label">Origin</span>
+                <span class="spec-value">Ratnapura</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Color</span>
+                <span class="spec-value">Grayish-Blue with Star</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Cut</span>
+                <span class="spec-value">Cabochon</span>
+              </div>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-container">
+                <span class="main-price" data-usd="6200">$6,200</span>
+                <span class="per-carat" data-usd-carat="709">$709 / ct</span>
+              </div>
+              <button class="add-to-cart-btn" data-id="feat-03" data-name="Blue Star Sapphire" data-price="6200" data-img="assets/images/feat_star_sapphire.jpg" data-spec="8.75 ct • Six-Ray Star GRS">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>ADD</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Pigeon Blood Ruby -->
+        <article class="figma-product-card" data-id="feat-04" data-category="ruby" data-base-price="8500" data-name="Pigeon Blood Ruby">
+          <div class="card-visual">
+            <div class="card-badges">
+              <span class="badge-lab">✦ GÜBELIN</span>
+            </div>
+            <button class="card-wishlist-btn" aria-label="Save to Wishlist" data-id="feat-04">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="assets/images/feat_ruby.jpg" alt="Pigeon Blood Ruby" class="product-img" loading="lazy">
+          </div>
+          <div class="card-details">
+            <div class="card-meta-top">
+              <span class="gem-type">RUBY</span>
+              <span class="gem-carat">1.85 ct</span>
+            </div>
+            <h3 class="card-title">Pigeon Blood Ruby</h3>
+            <div class="card-specs">
+              <div class="spec-row">
+                <span class="spec-label">Origin</span>
+                <span class="spec-value">Kataragama</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Color</span>
+                <span class="spec-value">Pigeon Blood Red</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Cut</span>
+                <span class="spec-value">Round Brilliant</span>
+              </div>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-container">
+                <span class="main-price" data-usd="8500">$8,500</span>
+                <span class="per-carat" data-usd-carat="4595">$4,595 / ct</span>
+              </div>
+              <button class="add-to-cart-btn" data-id="feat-04" data-name="Pigeon Blood Ruby" data-price="8500" data-img="assets/images/feat_ruby.jpg" data-spec="1.85 ct • Gübelin Certified">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>ADD</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Continuous Running Ticker Marquee -->
+  <div class="figma-ticker-strip">
+    <div class="figma-ticker-track">
+      <div class="ticker-content">
+        <span>QUALITY</span> <span class="bullet">•</span>
+        <span>DIRECT MINE SOURCING</span> <span class="bullet">•</span>
+        <span>ZERO TREATMENT</span> <span class="bullet">•</span>
+        <span>NATURAL CORUNDUM</span> <span class="bullet">•</span>
+        <span>ETHICALLY SOURCED</span> <span class="bullet">•</span>
+        <span>ISLAND OF GEMS</span> <span class="bullet">•</span>
+        <span>RATNAPURA</span> <span class="bullet">•</span>
+        <span>CERTIFIED EXCELLENCE</span> <span class="bullet">•</span>
+      </div>
+      <div class="ticker-content" aria-hidden="true">
+        <span>QUALITY</span> <span class="bullet">•</span>
+        <span>DIRECT MINE SOURCING</span> <span class="bullet">•</span>
+        <span>ZERO TREATMENT</span> <span class="bullet">•</span>
+        <span>NATURAL CORUNDUM</span> <span class="bullet">•</span>
+        <span>ETHICALLY SOURCED</span> <span class="bullet">•</span>
+        <span>ISLAND OF GEMS</span> <span class="bullet">•</span>
+        <span>RATNAPURA</span> <span class="bullet">•</span>
+        <span>CERTIFIED EXCELLENCE</span> <span class="bullet">•</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Island of Gems (Heritage) Section -->
+  <section class="figma-section figma-heritage-section" id="heritage">
+    <div class="container figma-heritage-grid">
+      <!-- Left Column: Visual Showcase -->
+      <div class="heritage-visual-col">
+        <div class="heritage-img-frame">
+          <img src="assets/images/heritage_gems.jpg" alt="Authentic Ceylon Gem Specimens and Minerals from Ratnapura" class="heritage-img" loading="lazy">
+          
+          <!-- Floating Glassmorphism Badge Top Right -->
+          <div class="heritage-glass-badge badge-top-right">
+            <span class="badge-title">GIA</span>
+            <span class="badge-sub">Certified Stones</span>
+          </div>
+
+          <!-- Floating Glassmorphism Badge Bottom Left -->
+          <div class="heritage-glass-badge badge-bottom-left">
+            <span class="badge-big-num">2500</span>
+            <span class="badge-sub">Years of Gem Heritage in Sri Lanka</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Story & Credentials -->
+      <div class="heritage-story-col">
+        <div class="figma-eyebrow left">
+          <span>OUR HERITAGE</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="figma-section-title heritage-title">
+          The Island<br>
+          <span class="hero-italic-gold">of Gems</span>
+        </h2>
+        <p class="heritage-text">
+          Sri Lanka — historically known as <strong>"Ratna Dweepa"</strong> (Island of Gems) — has been the world's finest source of precious gemstones for over 2,500 years. Ancient kings, Silk Road traders and modern collectors have all sought the extraordinary stones that emerge from our rich alluvial deposits.
+        </p>
+        <p class="heritage-text">
+          Lanka Gem House was established in Ratnapura — the City of Gems — in 1986. For nearly four decades, our family has maintained the trust of collectors, designers and investors worldwide by upholding uncompromising standards of authenticity and quality.
+        </p>
+
+        <div class="heritage-badges-grid">
+          <div class="heritage-stat-box">
+            <h4>Ratnapura</h4>
+            <p>Heart of Sri Lanka's gem trade</p>
+          </div>
+          <div class="heritage-stat-box">
+            <h4>GIA • AGL • GRS</h4>
+            <p>International certification</p>
+          </div>
+          <div class="heritage-stat-box">
+            <h4>Since 1986</h4>
+            <p>Generational family expertise</p>
+          </div>
+          <div class="heritage-stat-box">
+            <h4>48 Countries</h4>
+            <p>Global trusted customers</p>
+          </div>
+        </div>
+
+        <div class="heritage-actions">
+          <a href="#browse-gemstones" class="figma-btn figma-btn-primary">OUR FULL STORY →</a>
+          <a href="#lab-certifications" class="figma-btn figma-btn-outline">CERTIFICATION →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Luxury Footer -->
-  <footer class="luxury-footer">
-    <div class="container footer-container">
-      <div class="footer-brand-col">
-        <div class="footer-logo">
-          <span class="footer-logo-title">BLUE MERIDIAN</span>
-          <span class="footer-logo-sub">CEYLON FINE GEMS & JEWELRY</span>
+  <!-- Fine Jewellery Section -->
+  <section class="figma-section figma-jewellery-section" id="fine-jewellery">
+    <div class="container">
+      <div class="figma-split-header">
+        <div>
+          <div class="figma-eyebrow left">
+            <span>CRAFTED IN GOLD</span>
+            <span class="eyebrow-line"></span>
+          </div>
+          <h2 class="figma-section-title">Fine Jewellery</h2>
         </div>
-        <p class="footer-text">
-          Ethical custodians of ancient Ceylon gemstone treasures. Certified unheated sapphires, master lapidary arts, and heirloom fine jewelry crafted for generations.
+        <a href="#browse-gemstones" class="figma-btn figma-btn-outline">VIEW ALL JEWELLERY →</a>
+      </div>
+
+      <div class="figma-jewellery-grid">
+        <!-- 1. Sapphire Halo Engagement Ring -->
+        <article class="figma-jewel-card" data-id="jewel-01" data-base-price="5800" data-name="Sapphire Halo Engagement Ring">
+          <div class="jewel-visual">
+            <button class="card-wishlist-btn" aria-label="Save to Wishlist" data-id="jewel-01">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="assets/images/jewel_halo_ring.jpg" alt="Sapphire Halo Engagement Ring" class="jewel-img" loading="lazy">
+          </div>
+          <div class="jewel-details">
+            <span class="jewel-gold-tag">18K GOLD</span>
+            <h3 class="jewel-title">Sapphire Halo Engagement Ring</h3>
+            <div class="jewel-specs">
+              <div class="spec-row">
+                <span class="spec-label">Stone</span>
+                <span class="spec-value">2.1ct Blue Sapphire + 0.48ct Diamonds</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Material</span>
+                <span class="spec-value">18K White Gold</span>
+              </div>
+            </div>
+            <div class="jewel-footer-row">
+              <span class="main-price" data-usd="5800">$5,800</span>
+              <button class="add-to-cart-btn" data-id="jewel-01" data-name="Sapphire Halo Ring" data-price="5800" data-img="assets/images/jewel_halo_ring.jpg" data-spec="18K White Gold • 2.1ct Sapphire">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>ADD</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Ruby Solitaire Ring -->
+        <article class="figma-jewel-card" data-id="jewel-02" data-base-price="7200" data-name="Ruby Solitaire Ring">
+          <div class="jewel-visual">
+            <button class="card-wishlist-btn" aria-label="Save to Wishlist" data-id="jewel-02">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="assets/images/jewel_ruby_solitaire.jpg" alt="Ruby Solitaire Ring" class="jewel-img" loading="lazy">
+          </div>
+          <div class="jewel-details">
+            <span class="jewel-gold-tag">18K GOLD</span>
+            <h3 class="jewel-title">Ruby Solitaire Ring</h3>
+            <div class="jewel-specs">
+              <div class="spec-row">
+                <span class="spec-label">Stone</span>
+                <span class="spec-value">1.85ct Ceylon Ruby</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Material</span>
+                <span class="spec-value">18K Yellow Gold</span>
+              </div>
+            </div>
+            <div class="jewel-footer-row">
+              <span class="main-price" data-usd="7200">$7,200</span>
+              <button class="add-to-cart-btn" data-id="jewel-02" data-name="Ruby Solitaire Ring" data-price="7200" data-img="assets/images/jewel_ruby_solitaire.jpg" data-spec="18K Yellow Gold • 1.85ct Ruby">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>ADD</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Ceylon Sapphire Pendant -->
+        <article class="figma-jewel-card" data-id="jewel-03" data-base-price="3200" data-name="Ceylon Sapphire Pendant">
+          <div class="jewel-visual">
+            <button class="card-wishlist-btn" aria-label="Save to Wishlist" data-id="jewel-03">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="assets/images/jewel_pendant.jpg" alt="Ceylon Sapphire Pendant" class="jewel-img" loading="lazy">
+          </div>
+          <div class="jewel-details">
+            <span class="jewel-gold-tag">18K GOLD</span>
+            <h3 class="jewel-title">Ceylon Sapphire Pendant</h3>
+            <div class="jewel-specs">
+              <div class="spec-row">
+                <span class="spec-label">Stone</span>
+                <span class="spec-value">1.5ct Oval Blue Sapphire + Diamonds</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Material</span>
+                <span class="spec-value">18K White Gold with Diamond Bail</span>
+              </div>
+            </div>
+            <div class="jewel-footer-row">
+              <span class="main-price" data-usd="3200">$3,200</span>
+              <button class="add-to-cart-btn" data-id="jewel-03" data-name="Ceylon Sapphire Pendant" data-price="3200" data-img="assets/images/jewel_pendant.jpg" data-spec="18K White Gold • 1.5ct Oval Sapphire">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>ADD</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certified by the World's Best Laboratories Section -->
+  <section class="figma-section figma-labs-section" id="lab-certifications">
+    <div class="container">
+      <div class="figma-section-header text-center">
+        <div class="figma-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span>INDEPENDENTLY VERIFIED</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="figma-section-title">Certified by the World's Best Laboratories</h2>
+        <p class="figma-section-subtitle">
+          Every gemstone we sell is authenticated by an independent international gemological laboratory.
         </p>
-        <div class="footer-cert-badges">
-          <span class="f-badge"><i class="fa-solid fa-award"></i> GIA Alumni Member</span>
-          <span class="f-badge"><i class="fa-solid fa-certificate"></i> NGJA License #SL-GEM-402</span>
+      </div>
+
+      <div class="figma-labs-grid">
+        <!-- GIA -->
+        <div class="figma-lab-card">
+          <h3 class="lab-title">GIA</h3>
+          <p class="lab-name">Gemological Institute of America</p>
+          <span class="lab-meta">Est. 1931</span>
+        </div>
+
+        <!-- AGL -->
+        <div class="figma-lab-card">
+          <h3 class="lab-title">AGL</h3>
+          <p class="lab-name">American Gemological Labs</p>
+          <span class="lab-meta">New York</span>
+        </div>
+
+        <!-- GRS -->
+        <div class="figma-lab-card">
+          <h3 class="lab-title">GRS</h3>
+          <p class="lab-name">GemResearch Swisslab</p>
+          <span class="lab-meta">Bangkok</span>
+        </div>
+
+        <!-- Gübelin -->
+        <div class="figma-lab-card">
+          <h3 class="lab-title">Gübelin</h3>
+          <p class="lab-name">Gübelin Gem Lab</p>
+          <span class="lab-meta">Lucerne, CH</span>
+        </div>
+
+        <!-- IGI -->
+        <div class="figma-lab-card">
+          <h3 class="lab-title">IGI</h3>
+          <p class="lab-name">International Gem. Institute</p>
+          <span class="lab-meta">Antwerp</span>
         </div>
       </div>
 
-      <div class="footer-links-col">
-        <h5 class="footer-heading">Collections</h5>
-        <ul>
-          <li><a href="#vault" data-filter="blue-sapphire">Royal Blue Sapphires</a></li>
-          <li><a href="#vault" data-filter="padparadscha">Padparadscha Sapphires</a></li>
-          <li><a href="#vault" data-filter="ruby">Ceylon Pigeon Blood Rubies</a></li>
-          <li><a href="#vault" data-filter="star-sapphire">Natural Star Sapphires</a></li>
-          <li><a href="#vault" data-filter="rare-collector">Alexandrite & Canary Yellow</a></li>
-          <li><a href="#bespoke">Bespoke Engagement Rings</a></li>
+      <div class="figma-center-action">
+        <a href="https://wa.me/94771234567?text=Hello%20Blue%20Meridian,%20I%20would%20like%20to%20know%20more%20about%20your%20laboratory%20certifications" target="_blank" rel="noopener noreferrer" class="figma-btn figma-btn-outline">LEARN ABOUT CERTIFICATION & AUTHENTICITY →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Our Clients Say Section -->
+  <section class="figma-section figma-testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="figma-section-header text-center">
+        <div class="figma-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span>CLIENT EXPERIENCES</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="figma-section-title">What Our Clients Say</h2>
+      </div>
+
+      <div class="figma-testimonial-container">
+        <div class="figma-testimonial-card active" id="testimonialCard">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote class="testimonial-quote" id="testimonialQuote">
+            "I purchased a 2.5ct blue sapphire for my wife's engagement ring. The stone arrived beautifully packaged with the GIA certificate. The quality exceeded my expectations — a pure cornflower blue that photographs magnificently. Lanka Gem House has a lifelong customer."
+          </blockquote>
+          <div class="testimonial-client">
+            <div class="client-avatar" id="testimonialAvatar">A</div>
+            <div class="client-info">
+              <strong class="client-name" id="testimonialName">Amara de Silva</strong>
+              <span class="client-loc" id="testimonialLoc">London, United Kingdom</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Carousel Dots -->
+        <div class="figma-carousel-dots" id="testimonialDots">
+          <button class="dot active" data-index="0" aria-label="Testimonial 1"></button>
+          <button class="dot" data-index="1" aria-label="Testimonial 2"></button>
+          <button class="dot" data-index="2" aria-label="Testimonial 3"></button>
+          <button class="dot" data-index="3" aria-label="Testimonial 4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ready to Find Your Perfect Gemstone? CTA Banner -->
+  <section class="figma-section figma-cta-section" id="cta-banner">
+    <div class="container text-center">
+      <div class="figma-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span>BEGIN YOUR JOURNEY</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h2 class="figma-cta-title">
+        Ready to Find Your<br>
+        <span class="hero-italic-gold">Perfect Gemstone?</span>
+      </h2>
+      <p class="figma-cta-desc">
+        Our expert gemologists offer free consultations — by WhatsApp, email or video call. We'll guide you to the stone that truly speaks to you.
+      </p>
+      <div class="figma-hero-actions">
+        <a href="#browse-gemstones" class="figma-btn figma-btn-primary">SHOP NOW</a>
+        <a href="https://wa.me/94771234567?text=Hello%20Blue%20Meridian,%20I%20am%20ready%20to%20find%20my%20perfect%20gemstone" target="_blank" rel="noopener noreferrer" class="figma-btn figma-btn-outline">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>CHAT ON WHATSAPP</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive 4-Column Footer -->
+  <footer class="figma-footer" id="footer">
+    <div class="footer-provenance-bar">
+      <div class="container text-center">
+        <span class="provenance-text">CEYLON • RATNAPURA • SRI LANKA</span>
+      </div>
+    </div>
+
+    <div class="container figma-footer-grid">
+      <!-- Col 1: Brand & Social -->
+      <div class="footer-col footer-col-brand">
+        <a href="#hero" class="figma-brand footer-logo">
+          <div class="figma-logo-emblem">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="22,3 39,11 39,33 22,41 5,33 5,11" stroke="#e0b85a" stroke-width="1.8" fill="rgba(224, 184, 90, 0.05)"/>
+              <polygon points="22,9 33,14 33,30 22,35 11,30 11,14" stroke="#f3d99d" stroke-width="1.2" fill="none"/>
+              <circle cx="22" cy="22" r="3.2" fill="#e0b85a"/>
+            </svg>
+          </div>
+          <div class="figma-brand-text">
+            <span class="figma-brand-title">BLUE MERIDIAN</span>
+            <span class="figma-brand-subtitle">FINE CEYLON GEMS • EST. 1986</span>
+          </div>
+        </a>
+        <p class="footer-bio">
+          Sri Lanka's most trusted source for certified natural Ceylon gemstones and fine jewellery. Every stone we sell carries the legacy of over 2,500 years of gem trading heritage from Ratnapura.
+        </p>
+        <div class="footer-social-row">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Facebook">F</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Instagram">I</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="YouTube">Y</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Twitter / X">X</a>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation -->
+      <div class="footer-col">
+        <h4 class="footer-heading">NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">— Home</a></li>
+          <li><a href="#featured-gemstones">— Gemstone Collection</a></li>
+          <li><a href="#fine-jewellery">— Fine Jewellery</a></li>
+          <li><a href="#heritage">— Gemstone Guide</a></li>
+          <li><a href="#lab-certifications">— Certification & Authenticity</a></li>
+          <li><a href="#heritage">— About Us</a></li>
+          <li><a href="#footer">— Contact Us</a></li>
         </ul>
       </div>
 
-      <div class="footer-links-col">
-        <h5 class="footer-heading">The House</h5>
-        <ul>
-          <li><a href="#heritage">Ceylon Heritage & Mines</a></li>
-          <li><a href="#verify">Lab Certificate Verification</a></li>
-          <li><a href="#heritage">Artisanal Mining Ethics</a></li>
-          <li><a href="#contact">Private Salon Appointments</a></li>
-          <li><a href="#contact">Global Brink's Shipping</a></li>
-          <li><a href="#contact">Gemstone Care & Custody</a></li>
+      <!-- Col 3: Gemstones -->
+      <div class="footer-col">
+        <h4 class="footer-heading">GEMSTONES</h4>
+        <ul class="footer-links">
+          <li><a href="#browse-gemstones">— Blue Sapphire</a></li>
+          <li><a href="#browse-gemstones">— Star Sapphire</a></li>
+          <li><a href="#browse-gemstones">— Ruby</a></li>
+          <li><a href="#browse-gemstones">— Emerald</a></li>
+          <li><a href="#browse-gemstones">— Alexandrite</a></li>
+          <li><a href="#browse-gemstones">— Cat's Eye</a></li>
+          <li><a href="#browse-gemstones">— Amethyst</a></li>
+          <li><a href="#browse-gemstones">— Padparadscha</a></li>
         </ul>
       </div>
 
-      <div class="footer-newsletter-col">
-        <h5 class="footer-heading">The Collector’s Gazette</h5>
-        <p class="newsletter-desc">Receive exclusive previews of freshly unearthed unheated Ceylon sapphires before public vault release.</p>
-        <form class="newsletter-form" id="newsletterForm">
-          <input type="email" placeholder="Enter private email..." required id="newsletterEmail">
-          <button type="submit" class="btn btn-gold-gleam"><i class="fa-solid fa-arrow-right"></i></button>
-        </form>
-        <div class="footer-social-links">
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <!-- Col 4: Contact Us -->
+      <div class="footer-col">
+        <h4 class="footer-heading">CONTACT US</h4>
+        <div class="footer-contact-info">
+          <div class="contact-row">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>No. 47, Gem Street</strong><br>
+              <span>Ratnapura, Sri Lanka 70000</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <i class="fa-solid fa-phone"></i>
+            <span>+94 77 123 4567</span>
+          </div>
+          <div class="contact-row">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@lankagemhouse.com</span>
+          </div>
         </div>
+
+        <div class="business-hours-card">
+          <div class="hours-title">BUSINESS HOURS</div>
+          <div class="hours-row">
+            <span>Monday – Saturday</span>
+            <span>9:00 AM – 6:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span>Sunday</span>
+            <span>10:00 AM – 4:00 PM</span>
+          </div>
+        </div>
+
+        <a href="https://wa.me/94771234567?text=Hello%20Blue%20Meridian,%20I%20would%20like%20a%20WhatsApp%20consultation" target="_blank" rel="noopener noreferrer" class="figma-btn figma-btn-primary btn-block whatsapp-footer-btn">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>WHATSAPP CONSULTATION</span>
+        </a>
       </div>
     </div>
 
+    <!-- Bottom Bar with Lab & Payment Badges -->
     <div class="footer-bottom-bar">
-      <div class="container bottom-flex">
-        <p class="copyright">&copy; 2026 Blue Meridian Fine Gems Ltd. All Rights Reserved. Ratnapura • Colombo • London • Geneva.</p>
-        <div class="bottom-links">
-          <a href="#" id="footerReplayIntroLink"><i class="fa-solid fa-play" style="font-size: 0.72rem; margin-right: 4px; color: var(--gold-400);"></i> Replay Brand Intro</a>
-          <span class="sep">•</span>
-          <a href="#">Terms of Provenance</a>
-          <span class="sep">•</span>
-          <a href="#">Privacy Charter</a>
-          <span class="sep">•</span>
-          <a href="#">Security & Vault Insurance</a>
+      <div class="container footer-bottom-inner">
+        <div class="bottom-badges-left">
+          <span class="lab-pill">GIA</span>
+          <span class="lab-pill">AGL</span>
+          <span class="lab-pill">GRS</span>
+          <span class="lab-pill">GÜBELIN</span>
+          <span class="lab-pill">IGI</span>
+        </div>
+
+        <div class="bottom-badges-mid">
+          <span class="pay-pill"><i class="fa-brands fa-cc-visa"></i> VISA</span>
+          <span class="pay-pill"><i class="fa-brands fa-cc-mastercard"></i> Mastercard</span>
+          <span class="pay-pill"><i class="fa-brands fa-cc-paypal"></i> PayPal</span>
+          <span class="pay-pill"><i class="fa-brands fa-cc-amex"></i> Amex</span>
+          <span class="pay-pill"><i class="fa-solid fa-building-columns"></i> Wire</span>
+        </div>
+
+        <div class="bottom-copyright">
+          <p>© 2026 Blue Meridian (Pvt) Ltd. All rights reserved. Ratnapura, Sri Lanka. • Sri Lanka's Trusted Ceylon Gem Merchant.</p>
+          <div class="bottom-legal-links">
+            <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a> • <a href="#">Return Policy</a>
+          </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Slide-Over Shopping / Vault Bag Drawer -->
-  <div class="cart-drawer-overlay" id="cartOverlay"></div>
-  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+  <!-- Persistent Floating WhatsApp Concierge Button -->
+  <a href="https://wa.me/94771234567?text=Hello%20Blue%20Meridian,%20I%20would%20like%20to%20speak%20with%20a%20gemologist" target="_blank" rel="noopener noreferrer" class="figma-floating-whatsapp" aria-label="Direct WhatsApp Concierge" title="Chat with Senior Gemologist on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-tooltip">Chat with Gemologist</span>
+  </a>
+
+  <!-- Slide-out Shopping Cart Drawer -->
+  <div class="modal-backdrop" id="cartModalBackdrop" aria-hidden="true"></div>
+  <aside class="figma-cart-drawer" id="cartDrawer" aria-hidden="true">
     <div class="cart-drawer-header">
       <div class="cart-title-box">
         <i class="fa-solid fa-bag-shopping"></i>
-        <h3>Collector's Selection</h3>
-        <span class="cart-items-pill" id="cartDrawerCount">0 Items</span>
+        <h3>Collector's Bag (<span id="cartDrawerCount">0</span>)</h3>
       </div>
-      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close Bag"><i class="fa-solid fa-xmark"></i></button>
+      <button class="drawer-close" id="closeCartBtn" aria-label="Close Bag"><i class="fa-solid fa-xmark"></i></button>
     </div>
-
-    <div class="cart-drawer-body" id="cartItemsList">
-      <!-- Injected dynamically via JS -->
-      <div class="cart-empty-state" id="cartEmptyState">
-        <i class="fa-regular fa-gem empty-cart-icon"></i>
-        <h4>Your Selection is Empty</h4>
-        <p>Explore our certified Ceylon gemstones to add an heirloom treasure.</p>
-        <a href="#vault" class="btn btn-primary" id="continueShoppingBtn">Explore Collection</a>
+    
+    <div class="cart-drawer-items" id="cartItemsList">
+      <!-- Items dynamically populated via JS -->
+      <div class="empty-cart-state" id="emptyCartState">
+        <i class="fa-solid fa-gem"></i>
+        <p>Your acquisition bag is currently empty.</p>
+        <a href="#featured-gemstones" class="figma-btn figma-btn-outline btn-sm" id="emptyCartExploreBtn">Explore Collection</a>
       </div>
     </div>
 
     <div class="cart-drawer-footer" id="cartDrawerFooter">
-      <div class="promo-box">
-        <input type="text" id="promoCodeInput" placeholder="VIP Privilege Code (Try CEYLON10)">
-        <button class="btn btn-glass-sm" id="applyPromoBtn">Apply</button>
-      </div>
       <div class="cart-subtotal-breakdown">
         <div class="subtotal-row">
-          <span>Selection Subtotal</span>
-          <span class="subtotal-val" id="cartSubtotal">$0</span>
-        </div>
-        <div class="subtotal-row discount-row hidden" id="discountRow">
-          <span>Collector VIP Privilege (10%)</span>
-          <span class="discount-val" id="cartDiscount">-$0</span>
+          <span>Subtotal</span>
+          <span class="subtotal-val" id="cartSubtotalVal">$0</span>
         </div>
         <div class="subtotal-row">
-          <span>Insured Courier & Insurance</span>
+          <span>Insured Transit</span>
           <span class="shipping-val highlight-green">COMPLIMENTARY</span>
         </div>
         <div class="subtotal-row total-row">
-          <span>Estimated Valuation</span>
-          <span class="total-val" id="cartFinalTotal">$0</span>
+          <span>Estimated Total</span>
+          <span class="total-val" id="cartTotalVal">$0</span>
         </div>
       </div>
-      <button class="btn btn-primary btn-block btn-gold-gleam" id="checkoutTriggerBtn">
-        <i class="fa-solid fa-lock"></i>
-        <span>Proceed to Acquisition Inquiry</span>
+      <button class="figma-btn figma-btn-primary btn-block" id="proceedCheckoutBtn">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>PROCEED TO ACQUISITION</span>
       </button>
       <p class="checkout-guarantee">
-        <i class="fa-solid fa-shield-halved"></i> Accompanied by sealed original GIA/NGJA certificates with insured courier transit.
+        <i class="fa-solid fa-lock"></i> Fully insured international delivery with sealed laboratory certificates.
       </p>
     </div>
   </aside>
 
-  <!-- Quick View Gemstone Inspection Modal -->
-  <div class="modal-backdrop" id="quickViewModal" aria-hidden="true">
-    <div class="modal-dialog quickview-dialog">
-      <button class="modal-close-btn" id="closeQuickViewBtn" aria-label="Close Preview"><i class="fa-solid fa-xmark"></i></button>
-      <div class="quickview-grid" id="quickViewContent">
-        <!-- Injected via JavaScript -->
+  <!-- Slide-out Wishlist Drawer -->
+  <div class="modal-backdrop" id="wishlistModalBackdrop" aria-hidden="true"></div>
+  <aside class="figma-cart-drawer" id="wishlistDrawer" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <div class="cart-title-box">
+        <i class="fa-regular fa-heart"></i>
+        <h3>Saved Gemstones (<span id="wishlistDrawerCount">0</span>)</h3>
+      </div>
+      <button class="drawer-close" id="closeWishlistBtn" aria-label="Close Wishlist"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    
+    <div class="cart-drawer-items" id="wishlistItemsList">
+      <div class="empty-cart-state" id="emptyWishlistState">
+        <i class="fa-regular fa-heart"></i>
+        <p>No gemstones saved yet. Click the heart icon on any piece to save it here.</p>
       </div>
     </div>
-  </div>
+  </aside>
 
-  <!-- Interactive Checkout Modal -->
+  <!-- Interactive Acquisition Inquiry Modal -->
   <div class="modal-backdrop" id="checkoutModal" aria-hidden="true">
     <div class="modal-dialog checkout-dialog">
-      <button class="modal-close-btn" id="closeCheckoutBtn" aria-label="Close Checkout"><i class="fa-solid fa-xmark"></i></button>
+      <button class="modal-close-btn" id="closeCheckoutBtn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
       
       <div class="checkout-header">
         <div class="checkout-brand-mark">
           <i class="fa-solid fa-shield-halved"></i>
           <div>
             <h3>Private Acquisition Inquiry</h3>
-            <p>Direct Insured Courier from Colombo Atelier</p>
+            <p>Direct Insured Courier from Ratnapura Atelier</p>
           </div>
         </div>
       </div>
 
       <div class="checkout-body-grid">
-        <!-- Left: Form fields -->
         <div class="checkout-form-container">
           <form id="vaultCheckoutForm">
             <h4 class="form-section-title"><i class="fa-solid fa-user-shield"></i> 1. Client Information</h4>
@@ -1028,8 +1122,8 @@
                 <input type="email" required placeholder="david.sterling@example.com">
               </div>
               <div class="form-group">
-                <label>Direct Telephone</label>
-                <input type="tel" required placeholder="+44 20 7946 0912">
+                <label>Direct Phone / WhatsApp</label>
+                <input type="tel" required placeholder="+44 7700 900077">
               </div>
             </div>
 
@@ -1054,49 +1148,28 @@
                   <option>Japan</option>
                   <option>Singapore</option>
                   <option>Germany</option>
-                  <option>France</option>
+                  <option>Australia</option>
                 </select>
               </div>
             </div>
 
-            <h4 class="form-section-title"><i class="fa-solid fa-credit-card"></i> 3. Preferred Settlement Method</h4>
-            <div class="payment-method-selector">
-              <label class="payment-method-option active">
-                <input type="radio" name="payMethod" value="wire" checked>
-                <div class="pay-body">
-                  <strong><i class="fa-solid fa-building-columns"></i> Bank Wire / Escrow Transfer</strong>
-                  <span>Private Swiss / Ceylon Escrow Account with release upon verified receipt.</span>
-                </div>
-              </label>
-              <label class="payment-method-option">
-                <input type="radio" name="payMethod" value="card">
-                <div class="pay-body">
-                  <strong><i class="fa-regular fa-credit-card"></i> Credit Card / American Express</strong>
-                  <span>Encrypted 256-bit bank-level security.</span>
-                </div>
-              </label>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block btn-gold-gleam mt-4">
-              <i class="fa-solid fa-check"></i> Submit Acquisition Request
+            <button type="submit" class="figma-btn figma-btn-primary btn-block mt-4">
+              <i class="fa-solid fa-check"></i> Submit Acquisition Inquiry
             </button>
           </form>
         </div>
 
-        <!-- Right: Summary -->
         <div class="checkout-summary-container">
           <div class="checkout-order-summary-box">
             <h4>Acquisition Summary</h4>
-            <div class="checkout-items-summary" id="checkoutItemsSummary">
-              <!-- Injected via JS -->
-            </div>
+            <div class="checkout-items-summary" id="checkoutItemsSummary"></div>
             <div class="checkout-totals">
               <div class="c-row">
                 <span>Subtotal</span>
                 <span id="checkoutSubtotalDisplay">$0</span>
               </div>
               <div class="c-row highlight-green">
-                <span>Insured Courier & GIA Seal</span>
+                <span>Insured Courier & Lab Seal</span>
                 <span>COMPLIMENTARY</span>
               </div>
               <div class="c-row total-c-row">
@@ -1106,7 +1179,7 @@
             </div>
             <div class="checkout-notes-card">
               <i class="fa-solid fa-lock"></i>
-              <p>Upon submission, your selected stones are reserved. A senior gemologist from our Colombo salon will contact you directly within 2 hours to confirm certification, ring sizing, and private courier arrangements.</p>
+              <p>Upon submission, your selected stones are reserved. A senior gemologist from our Ratnapura salon will contact you directly within 2 hours to confirm certification and courier arrangements.</p>
             </div>
           </div>
         </div>
@@ -1114,7 +1187,7 @@
     </div>
   </div>
 
-  <!-- Toast Notification Alert Box -->
+  <!-- Toast Notification Container -->
   <div class="toast-container" id="toastContainer"></div>
 
   <!-- Main JavaScript File -->
