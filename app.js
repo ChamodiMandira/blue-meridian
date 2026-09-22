@@ -18,22 +18,27 @@ document.addEventListener('DOMContentLoaded', () => {
     let introDismissed = false;
     let animFrameId = null;
 
-    function dismissIntro() {
+    function dismissIntro(immediate = false) {
       if (introDismissed) return;
       introDismissed = true;
-      luxuryIntroOverlay.classList.add('fade-out');
       if (animFrameId) cancelAnimationFrame(animFrameId);
+      if (immediate) {
+        luxuryIntroOverlay.classList.add('dismissed');
+        luxuryIntroOverlay.style.display = 'none';
+        return;
+      }
+      luxuryIntroOverlay.classList.add('fade-out');
       setTimeout(() => {
         luxuryIntroOverlay.classList.add('dismissed');
       }, 850);
     }
 
-    if (introEnterBtn) introEnterBtn.addEventListener('click', dismissIntro);
-    if (introSkipBtn) introSkipBtn.addEventListener('click', dismissIntro);
+    if (introEnterBtn) introEnterBtn.addEventListener('click', () => dismissIntro(false));
+    if (introSkipBtn) introSkipBtn.addEventListener('click', () => dismissIntro(true));
 
     // If deep-linked with a section hash (e.g. #browse-gemstones), skip intro immediately
     if (window.location.hash) {
-      dismissIntro();
+      dismissIntro(true);
     }
 
     // Auto-progress bar over 4.5 seconds
