@@ -3039,18 +3039,43 @@ a {
               filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
               visibility 0.85s ease;
+  animation: introOverlayAutoFade 5s forwards cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes introOverlayAutoFade {
+  0%, 75% {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  95% {
+    opacity: 0;
+    visibility: hidden;
+    filter: blur(14px);
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+  }
 }
 
 .luxury-intro-overlay.fade-out {
-  opacity: 0;
-  filter: blur(14px);
-  transform: scale(1.03);
-  visibility: hidden;
-  pointer-events: none;
+  animation: none !important;
+  opacity: 0 !important;
+  filter: blur(14px) !important;
+  transform: scale(1.03) !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .luxury-intro-overlay.dismissed {
+  animation: none !important;
   display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 /* Ambient Canvas for Floating Stardust Particles */
